@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum SMM Services - Accelerate Your Growth</title>
+    <meta name="description" content="Browse Quantum SMM's extensive list of high-performance SMM services. Filter by platform, search by ID or name, and view detailed service information instantly.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22><stop offset=%220%25%22 style=%22stop-color:%2300f0ff;stop-opacity:1%22 /><stop offset=%22100%25%22 style=%22stop-color:%23a855f7;stop-opacity:1%22 /></linearGradient></defs><path fill=%22url(%23g)%22 d=%22M50 0L61.8 38.2L100 38.2L69.1 61.8L80.9 100L50 76.4L19.1 100L30.9 61.8L0 38.2L38.2 38.2Z%22 /></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* --- Root Variables (Same as previous version) --- */
+        :root {
+            --bg-dark-primary: #080d14;
+            --bg-dark-secondary: #101522;
+            --bg-dark-tertiary: #1a202c;
+            --accent-cyan: #00e5ff;
+            --accent-purple: #b367ff;
+            --accent-indigo: #7076ff;
+            --accent-green: #14f195;
+            --accent-pink: #ff55a5;
+            --accent-gold: #ffc85a;
+            --text-light: #f0f4f8;
+            --text-medium: #a0aec0;
+            --text-dark: var(--bg-dark-primary);
+            --border-color: rgba(55, 65, 81, 0.6);
+            --border-accent: rgba(0, 229, 255, 0.5);
+            --glow-cyan: 0 0 18px rgba(0, 229, 255, 0.5), 0 0 7px rgba(0, 229, 255, 0.8);
+            --glow-purple: 0 0 18px rgba(179, 103, 255, 0.5), 0 0 7px rgba(179, 103, 255, 0.8);
+            --gradient-tech: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            --gradient-button: linear-gradient(90deg, var(--accent-indigo), var(--accent-purple));
+            --gradient-dark-card: linear-gradient(145deg, rgba(17, 21, 34, 0.85), rgba(26, 32, 44, 0.95));
+            --gradient-support: linear-gradient(45deg, var(--accent-cyan), var(--accent-pink));
+            --gradient-modal-header: linear-gradient(135deg, rgba(0, 229, 255, 0.15), rgba(179, 103, 255, 0.15));
+
+            --shadow-glow-sm: 0 0 10px rgba(0, 229, 255, 0.25);
+            --shadow-glow-md: 0 0 18px rgba(179, 103, 255, 0.3);
+            --shadow-glow-lg: 0 0 30px rgba(112, 118, 255, 0.35);
+            --shadow-dark-soft: 0 8px 25px rgba(0, 0, 0, 0.3);
+            --shadow-dark-medium: 0 12px 35px rgba(0, 0, 0, 0.4);
+
+            --border-radius: 12px;
+            --transition-speed: 0.35s;
+            --transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --transition-smooth: cubic-bezier(0.25, 0.8, 0.25, 1);
+            --font-primary: 'Poppins', sans-serif;
+            --font-mono: 'Roboto Mono', monospace;
+        }
+
+        /* --- Base, Utilities, Animations, Header, Footer, Widgets CSS (Same as previous version) --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-primary); color: var(--text-light); background-color: var(--bg-dark-primary); background-image: radial-gradient(rgba(26, 32, 44, 0.4) 0.5px, transparent 0.5px), radial-gradient(rgba(26, 32, 44, 0.4) 0.5px, transparent 0.5px); background-size: 70px 70px; background-position: 0 0, 35px 35px; line-height: 1.8; overflow-x: hidden; position: relative; }
+        body.mobile-menu-active, body.modal-open { overflow: hidden; }
+        .container { max-width: 1400px; width: 100%; margin: 0 auto; padding: 0 1.5rem; }
+        .section { padding: 6.5rem 0; position: relative; overflow: hidden; }
+        .section-small-padding { padding: 4.5rem 0; }
+        .section-divider { border-top: 1px solid var(--border-color); opacity: 0.4; margin: 4rem auto; max-width: 1100px; }
+        .section-bg-secondary { background-color: var(--bg-dark-secondary); background-image: linear-gradient(rgba(8, 13, 20, 0.92), rgba(8, 13, 20, 0.97)), linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: cover, 40px 40px; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .section-title { text-align: center; margin-bottom: 5rem; font-size: 3.2rem; font-weight: 700; color: var(--text-light); position: relative; padding-bottom: 1.8rem; letter-spacing: 1.2px; text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35); }
+        .section-title::before { content: ''; position: absolute; top: -18px; left: 50%; transform: translateX(-50%); width: 130px; height: 4px; background: var(--gradient-tech); opacity: 0.45; border-radius: 2px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 150px; height: 6px; background: var(--gradient-tech); border-radius: 3px; box-shadow: var(--glow-cyan); animation: pulse-glow 3s infinite ease-in-out; }
+        .text-center { text-align: center; }
+        .mb-4 { margin-bottom: 4rem; }
+        .btn { display: inline-block; padding: 1rem 2.3rem; border-radius: var(--border-radius); font-weight: 600; text-decoration: none; transition: all var(--transition-speed) var(--transition-smooth); cursor: pointer; border: 2px solid transparent; font-size: 1rem; position: relative; overflow: hidden; z-index: 1; text-transform: uppercase; letter-spacing: 0.6px; }
+        .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent); transition: left var(--transition-speed) ease-out; z-index: -1; }
+        .btn:hover::before { left: 100%; }
+        .btn-primary { background: var(--gradient-button); color: var(--text-light); box-shadow: var(--shadow-glow-md), 0 5px 12px rgba(0,0,0,0.35); }
+        .btn-primary:hover { transform: translateY(-6px) scale(1.06); box-shadow: var(--shadow-glow-lg), 0 12px 25px rgba(0,0,0,0.45); filter: brightness(1.3); }
+        .btn-secondary { background-color: transparent; color: var(--accent-cyan); border-color: var(--accent-cyan); box-shadow: var(--shadow-glow-sm); }
+        .btn-secondary:hover { background-color: var(--accent-cyan); color: var(--bg-dark-primary); box-shadow: var(--glow-cyan), 0 5px 12px rgba(0, 229, 255, 0.25); transform: translateY(-4px) scale(1.04); }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: var(--glow-cyan); opacity: 0.85; } 50% { box-shadow: 0 0 30px rgba(0, 229, 255, 0.8); opacity: 1; } }
+        @keyframes subtle-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        @keyframes pulse-support { 0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(0, 229, 255, 0.4); } 50% { transform: scale(1.08); box-shadow: 0 0 25px rgba(0, 229, 255, 0.7); } }
+        @keyframes slide-in-left { from { transform: translateX(-110%); opacity: 0; visibility: hidden; } to { transform: translateX(0); opacity: 1; visibility: visible; } }
+        @keyframes slide-out-left { from { transform: translateX(0); opacity: 1; visibility: visible; } to { transform: translateX(-110%); opacity: 0; visibility: hidden; } }
+        @keyframes fade-in-up { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes modal-scale-up { from { opacity: 0; transform: translateY(-40px) scale(0.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        @keyframes modal-fade-in { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes background-gradient-shift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .animated-element { opacity: 0; transform: translateY(60px); transition: opacity 0.9s ease-out, transform 0.9s var(--transition-bounce); }
+        .animated-element.fade-in-up { animation: fade-in-up 0.8s ease-out forwards; opacity: 0; }
+        .animated-element.visible { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.1s; animation-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; animation-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; animation-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; animation-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; animation-delay: 0.5s; }
+        #main-header { background-color: rgba(8, 13, 20, 0.85); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 1rem 0; position: sticky; top: 0; left:0; right: 0; width: 100%; z-index: 1000; border-bottom: 1px solid var(--border-color); transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-top-color var(--transition-speed) ease, padding var(--transition-speed) ease; border-top: 3px solid transparent; }
+        #main-header.scrolled { background-color: rgba(8, 13, 20, 0.97); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); border-bottom-color: rgba(55, 65, 81, 0.7); border-top: 3px solid var(--accent-cyan); padding: 0.8rem 0; }
+        #main-header .container { display: flex; justify-content: space-between; align-items: center; }
+        #navbar { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        #navbar .logo { font-size: 1.9rem; font-weight: 800; color: var(--text-light); text-decoration: none; letter-spacing: -1px; display: flex; align-items: center; transition: transform var(--transition-speed) ease; font-family: 'Poppins', sans-serif; flex-shrink: 0; }
+        #navbar .logo:hover { transform: scale(1.03) rotate(-2deg); }
+        #navbar .logo i { margin-right: 0.7rem; font-size: 1.8rem; background: var(--gradient-tech); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 8px var(--accent-cyan)); transition: transform 0.6s var(--transition-bounce); }
+        #navbar .logo:hover i { transform: rotate(360deg) scale(1.15); }
+        #navbar ul#nav-links-desktop { list-style: none; display: flex; align-items: center; margin: 0; padding: 0; }
+        #navbar ul#nav-links-desktop li { margin-left: 2.5rem; }
+        #navbar ul#nav-links-desktop li a:not(.btn) { text-decoration: none; color: var(--text-medium); font-weight: 500; padding-bottom: 0.8rem; position: relative; transition: color var(--transition-speed) ease; letter-spacing: 0.7px; font-size: 1.05rem; white-space: nowrap; }
+        #navbar ul#nav-links-desktop li a:not(.btn)::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 3px; background: var(--accent-cyan); border-radius: 1px; transition: width var(--transition-speed) var(--transition-bounce); box-shadow: var(--glow-cyan); }
+        #navbar ul#nav-links-desktop li a:not(.btn):hover, #navbar ul#nav-links-desktop li a:not(.btn).active { color: var(--text-light); text-shadow: 0 0 6px rgba(0, 229, 255, 0.6); }
+        #navbar ul#nav-links-desktop li a:not(.btn):hover::after, #navbar ul#nav-links-desktop li a:not(.btn).active::after { width: 100%; }
+        .menu-toggle { display: none; cursor: pointer; font-size: 1.9rem; color: var(--text-light); padding: 5px; border: none; background: none; z-index: 1001; margin-left: 1rem; }
+        ul#mobile-nav-links { list-style: none; display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: rgba(11, 18, 32, 0.99); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 1.5rem 0; text-align: center; border-top: 1px solid var(--border-color); box-shadow: 0 15px 30px rgba(0,0,0,0.45); opacity: 0; transform: translateY(-15px) scaleY(0.95); transform-origin: top center; transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; z-index: 999; visibility: hidden; }
+        ul#mobile-nav-links.active { display: flex; opacity: 1; transform: translateY(0) scaleY(1); visibility: visible; transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s; }
+        ul#mobile-nav-links li { margin: 1.3rem 0; }
+        ul#mobile-nav-links li a { color: var(--text-medium); text-decoration: none; font-weight: 500; font-size: 1.2rem; padding: 0.7rem 1rem; transition: color var(--transition-speed) ease, background-color 0.2s ease; display: block; border-radius: 5px; margin: 0 1rem; }
+        ul#mobile-nav-links li a.active, ul#mobile-nav-links li a:hover { color: var(--accent-cyan); background-color: rgba(0, 229, 255, 0.08); }
+        #main-footer { background-color: var(--bg-dark-primary); color: var(--text-medium); padding: 5rem 0 3rem 0; border-top: 1px solid var(--border-color); }
+        #main-footer .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 3.5rem; align-items: start; }
+        #main-footer .footer-column { margin-bottom: 1.5rem; }
+        #main-footer .footer-logo { grid-column: 1 / -1; font-size: 2.2rem; font-weight: 800; color: var(--text-light); opacity: 0.95; margin-bottom: 2.5rem; text-align: center; display: block; font-family: 'Poppins', sans-serif; }
+         #main-footer .footer-column h4 { color: var(--text-light); font-size: 1.4rem; margin-bottom: 1.5rem; font-weight: 600; position: relative; padding-bottom: 0.7rem; letter-spacing: 0.5px; }
+         #main-footer .footer-column h4::after { content: ''; position: absolute; left: 0; bottom: 0; width: 50px; height: 3px; opacity: 0.8; border-radius: 1px; }
+         #main-footer .footer-about h4::after { background: var(--accent-cyan); }
+         #main-footer .footer-links-section h4::after { background: var(--accent-purple); }
+         #main-footer .footer-contact h4::after { background: var(--accent-indigo); }
+        #main-footer .footer-about p { font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
+        #main-footer .footer-links { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; padding-left: 0; }
+        #main-footer .footer-links a { color: var(--text-medium); text-decoration: none; transition: color var(--transition-speed) ease, padding-left 0.3s ease; font-size: 1rem; display: inline-block; padding: 0.2rem 0; }
+        #main-footer .footer-links a:hover { color: var(--accent-cyan); text-shadow: 0 0 5px var(--accent-cyan); padding-left: 5px; }
+        #main-footer .social-links { list-style: none; display: flex; gap: 2rem; margin-bottom: 1rem; font-size: 1.7rem; justify-content: flex-start; padding-left: 0; }
+        #main-footer .social-links a { color: var(--text-medium); text-decoration: none; transition: color var(--transition-speed) ease, transform var(--transition-speed) ease; }
+        #main-footer .social-links a:hover { color: var(--accent-cyan); transform: scale(1.25) translateY(-4px); filter: drop-shadow(0 0 10px var(--accent-cyan)); }
+        #main-footer .footer-contact p { margin-top: 1rem; }
+        #main-footer .footer-contact p a { color: var(--text-medium); text-decoration: none; transition: color var(--transition-speed) ease; font-size: 1rem; }
+        #main-footer .footer-contact p a:hover { color: var(--accent-cyan); }
+        #main-footer .copyright { grid-column: 1 / -1; text-align: center; font-size: 0.95rem; opacity: 0.7; line-height: 1.5; margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border-color); }
+        #main-footer .copyright a { color: var(--text-medium); text-decoration: none; border-bottom: 1px dashed rgba(160, 174, 192, 0.5); transition: color 0.3s, border-color 0.3s; }
+        #main-footer .copyright a:hover { color: var(--accent-cyan); border-bottom-color: var(--accent-cyan); }
+        #support-widget { position: fixed; bottom: 25px; right: 25px; z-index: 1001; }
+        #support-toggle { width: 60px; height: 60px; background: var(--gradient-support); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--text-light); font-size: 1.8rem; cursor: pointer; border: none; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), var(--shadow-glow-sm); transition: transform 0.3s var(--transition-bounce), box-shadow 0.3s ease; animation: pulse-support 2.5s infinite ease-in-out; }
+        #support-toggle:hover { transform: scale(1.1); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), var(--shadow-glow-md); }
+        #support-options { position: absolute; bottom: 75px; right: 0; display: flex; flex-direction: column; gap: 12px; opacity: 0; visibility: hidden; transform: translateY(15px) scale(0.9); transform-origin: bottom right; transition: all 0.3s var(--transition-bounce); }
+        #support-widget.active #support-options { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+        #support-options a { width: 50px; height: 50px; background-color: var(--bg-dark-tertiary); border: 1px solid var(--border-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--text-medium); font-size: 1.5rem; text-decoration: none; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; }
+        #support-options a:hover { transform: scale(1.1) rotate(5deg); box-shadow: var(--glow-cyan); }
+        #support-options a.whatsapp:hover { background-color: #25D366; color: white; box-shadow: 0 0 15px #25D366; }
+        #support-options a.telegram:hover { background-color: #0088cc; color: white; box-shadow: 0 0 15px #0088cc; }
+        #support-options a.call:hover { background-color: var(--accent-pink); color: white; box-shadow: 0 0 15px var(--accent-pink); }
+        #ad-banner { position: fixed; bottom: 25px; left: 25px; background-color: rgba(26, 32, 44, 0.98); padding: 1rem 1.5rem; border-radius: var(--border-radius); border: 1px solid var(--border-accent); z-index: 1000; display: flex; align-items: center; gap: 1rem; max-width: 320px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45); opacity: 0; visibility: hidden; transform: translateX(-110%); transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s; }
+        #ad-banner.visible { opacity: 1; visibility: visible; transform: translateX(0); transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.25, 1, 0.5, 1), visibility 0s linear 0s; }
+        #ad-banner.hidden { opacity: 0; visibility: hidden; transform: translateX(-110%); transition: opacity 0.5s ease-in, transform 0.5s ease-in, visibility 0s linear 0.5s; pointer-events: none; }
+        #ad-banner p { margin: 0; font-size: 0.95rem; color: var(--text-medium); flex-grow: 1; }
+        #ad-banner p strong { color: var(--accent-cyan); font-weight: 600; }
+        #ad-banner p a { color: var(--accent-pink); text-decoration: none; border-bottom: 1px dotted var(--accent-pink); transition: color 0.3s ease, border-color 0.3s ease; }
+        #ad-banner p a:hover { color: var(--accent-cyan); border-bottom-color: var(--accent-cyan); }
+        #close-ad-btn { background: none; border: none; color: var(--text-medium); font-size: 1.4rem; cursor: pointer; transition: color 0.3s ease, transform 0.3s ease; padding: 0.2rem; line-height: 1; align-self: flex-start; }
+        #close-ad-btn:hover { color: var(--accent-pink); transform: scale(1.15) rotate(90deg); }
+
+        /* --- Service Page Specific Styles --- */
+        #services-hero { padding: 7rem 0 5rem 0; text-align: center; background: linear-gradient(rgba(8, 13, 20, 0.9), rgba(16, 21, 34, 0.98)), var(--bg-dark-secondary); border-bottom: 1px solid var(--border-color); position: relative; overflow: hidden; background-size: 200% 200%; animation: background-gradient-shift 20s ease infinite; }
+        #services-hero h1 { font-size: 3.8rem; color: var(--text-light); margin-bottom: 0.5rem; font-weight: 700; text-shadow: 0 3px 10px rgba(0,0,0,0.4); }
+        #services-hero h1 span { background: var(--gradient-tech); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 10px var(--accent-cyan)); }
+        #services-hero p { font-size: 1.3rem; color: var(--text-medium); max-width: 800px; margin: 0 auto; opacity: 0.9; margin-top: 0.5rem; }
+        #platform-filter { padding: 3.5rem 0 1.5rem 0; background-color: var(--bg-dark-tertiary); border-bottom: 1px solid var(--border-color); position: sticky; top: 70px; z-index: 998; }
+        .platform-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 1.5rem; margin-bottom: 2.5rem; }
+        .platform-btn { display: inline-flex; align-items: center; gap: 0.7rem; padding: 0.8rem 1.8rem; background-color: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 50px; color: var(--text-medium); font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.3s ease; text-decoration: none; white-space: nowrap; }
+        .platform-btn i { font-size: 1.25em; }
+        .platform-btn:hover, .platform-btn.active { background-color: var(--accent-cyan); color: var(--bg-dark-primary); border-color: var(--accent-cyan); box-shadow: var(--glow-cyan); transform: translateY(-4px); }
+        .platform-btn.platform-instagram.active, .platform-btn.platform-instagram:hover { background-color: #c13584; color: white; border-color: #c13584; box-shadow: 0 0 12px #c13584; }
+        .platform-btn.platform-facebook.active, .platform-btn.platform-facebook:hover { background-color: #1877f2; color: white; border-color: #1877f2; box-shadow: 0 0 12px #1877f2; }
+        .platform-btn.platform-youtube.active, .platform-btn.platform-youtube:hover { background-color: #ff0000; color: white; border-color: #ff0000; box-shadow: 0 0 12px #ff0000; }
+        .platform-btn.platform-tiktok.active, .platform-btn.platform-tiktok:hover { background-color: #010101; color: white; border-color: #555; box-shadow: 0 0 12px #fff; }
+        .platform-btn.platform-twitter.active, .platform-btn.platform-twitter:hover { background-color: #1da1f2; color: white; border-color: #1da1f2; box-shadow: 0 0 12px #1da1f2; }
+        .platform-btn.platform-telegram.active, .platform-btn.platform-telegram:hover { background-color: #0088cc; color: white; border-color: #0088cc; box-shadow: 0 0 12px #0088cc; }
+        .platform-btn.platform-spotify.active, .platform-btn.platform-spotify:hover { background-color: #1db954; color: white; border-color: #1db954; box-shadow: 0 0 12px #1db954; }
+        .platform-btn.platform-pinterest.active, .platform-btn.platform-pinterest:hover { background-color: #e60023; color: white; border-color: #e60023; box-shadow: 0 0 12px #e60023; }
+        .platform-btn.platform-website.active, .platform-btn.platform-website:hover { background-color: var(--accent-gold); color: var(--bg-dark-primary); border-color: var(--accent-gold); box-shadow: 0 0 12px var(--accent-gold); }
+        .platform-btn.platform-reddit.active, .platform-btn.platform-reddit:hover { background-color: #ff4500; color: white; border-color: #ff4500; box-shadow: 0 0 12px #ff4500; }
+        .platform-btn.platform-linkedin.active, .platform-btn.platform-linkedin:hover { background-color: #0a66c2; color: white; border-color: #0a66c2; box-shadow: 0 0 12px #0a66c2;}
+        .platform-btn.platform-discord.active, .platform-btn.platform-discord:hover { background-color: #5865f2; color: white; border-color: #5865f2; box-shadow: 0 0 12px #5865f2;}
+        .platform-btn.platform-other.active, .platform-btn.platform-other:hover { background-color: var(--accent-pink); color: white; border-color: var(--accent-pink); box-shadow: 0 0 12px var(--accent-pink);}
+
+        .search-filter-container { display: flex; justify-content: center; margin-bottom: 3rem; }
+        .search-filter-container input[type="text"] { padding: 0.9rem 1.5rem; background-color: rgba(8, 13, 20, 0.8); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-light); font-size: 1.05rem; font-family: var(--font-primary); transition: border-color 0.3s ease, box-shadow 0.3s ease; width: 100%; max-width: 550px; }
+        .search-filter-container input[type="text"]:focus { outline: none; border-color: var(--accent-cyan); box-shadow: 0 0 12px rgba(0, 229, 255, 0.25); }
+        #services-table-section { padding: 4rem 0 6rem 0; }
+        .services-table-wrapper { overflow-x: auto; background-color: var(--bg-dark-tertiary); border-radius: var(--border-radius); border: 1px solid var(--border-color); box-shadow: var(--shadow-dark-medium); }
+        .services-table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 950px; }
+        .services-table th, .services-table td { padding: 1.1rem 1.3rem; text-align: left; border-bottom: 1px solid var(--border-color); font-size: 1rem; }
+        .services-table th { background-color: rgba(8, 13, 20, 0.9); color: var(--accent-cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; position: sticky; top: 0; z-index: 2; }
+        .services-table th:first-child { border-top-left-radius: var(--border-radius); }
+        .services-table th:last-child { border-top-right-radius: var(--border-radius); }
+        .services-table tbody tr { transition: background-color 0.25s ease; }
+        .services-table tbody tr:hover { background-color: rgba(42, 50, 66, 0.8); }
+        .services-table td { color: var(--text-medium); vertical-align: middle; }
+        .services-table td:first-child { color: var(--text-light); font-weight: 600; font-family: var(--font-mono); }
+        .services-table .service-name { color: var(--text-light); font-weight: 500; line-height: 1.5; }
+        .services-table .rate { color: var(--accent-green); font-weight: 600; font-family: var(--font-mono); white-space: nowrap; }
+        .services-table .min-max { font-family: var(--font-mono); white-space: nowrap;}
+        .services-table .avg-time { white-space: nowrap;}
+        .services-table .details-btn { padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; background-color: var(--accent-indigo); color: var(--text-light); border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease; }
+        .services-table .details-btn:hover { background-color: var(--accent-purple); transform: scale(1.05); }
+        .services-table .details-btn i { margin-left: 6px;}
+        .services-table tr.hidden { display: none; }
+        #no-results-message { display: none; text-align: center; color: var(--text-medium); font-size: 1.1rem; padding: 3rem 0; }
+
+        /* Modal Styles */
+        .modal { display: none; position: fixed; z-index: 1050; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; background-color: rgba(8, 13, 20, 0.85); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); opacity: 0; transition: opacity 0.3s ease, visibility 0s linear 0.3s; visibility: hidden; }
+        .modal.show { display: flex; align-items: center; justify-content: center; opacity: 1; visibility: visible; transition: opacity 0.3s ease, visibility 0s linear 0s; animation: modal-fade-in 0.3s ease; }
+        .modal-dialog { position: relative; margin: 1rem; max-width: 750px; width: 90%; }
+        .modal-content { position: relative; background: var(--gradient-dark-card); border: 1px solid var(--border-color); border-radius: var(--border-radius); box-shadow: var(--shadow-dark-medium); color: var(--text-light); animation: modal-scale-up 0.4s var(--transition-bounce); overflow: hidden; }
+        .modal-header { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: var(--gradient-modal-header); }
+        .modal-title { margin: 0; font-size: 1.8rem; color: var(--text-light); font-weight: 600; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+        .modal-close-btn { background: none; border: none; font-size: 2rem; color: var(--text-medium); cursor: pointer; padding: 0.5rem; line-height: 1; transition: color 0.3s ease, transform 0.3s ease; }
+        .modal-close-btn:hover { color: var(--accent-pink); transform: rotate(90deg) scale(1.1); }
+        .modal-body { padding: 2rem 2.5rem; max-height: 60vh; overflow-y: auto; }
+        .modal-body h5 { font-size: 1.3rem; color: var(--accent-cyan); margin-bottom: 1rem; font-weight: 600; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; }
+        .modal-body ul { list-style: none; padding: 0; margin: 0 0 1.5rem 0; }
+        .modal-body li { margin-bottom: 0.7rem; color: var(--text-medium); display: flex; flex-wrap: wrap; gap: 0.5rem; } /* Use flex for better alignment */
+        .modal-body li strong { color: var(--text-light); font-weight: 600; min-width: 100px; /* Adjust width as needed */ flex-shrink: 0; }
+        .modal-body p.description { font-size: 1.05rem; color: var(--text-light); margin-top: 1.5rem; line-height: 1.9; background: rgba(8, 13, 20, 0.6); padding: 1.2rem; border-radius: 8px; border: 1px solid rgba(55, 65, 81, 0.3); }
+        .modal-footer { padding: 1.5rem 2rem; border-top: 1px solid var(--border-color); text-align: right; background-color: rgba(8, 13, 20, 0.5); }
+        .modal-footer .btn { margin-left: 0.8rem; }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            #navbar ul#nav-links-desktop { display: none; }
+            .menu-toggle { display: block; }
+            #platform-filter { position: static; }
+            #main-footer .footer-content { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+            #main-footer .footer-column { text-align: left; }
+            #main-footer .footer-column h4::after { left: 0; transform: none; }
+            #main-footer .social-links { justify-content: flex-start; }
+        }
+        @media (max-width: 768px) {
+             html { font-size: 14px; }
+             .section { padding: 5rem 0; }
+             .section-title { font-size: 2.6rem; margin-bottom: 3.5rem;}
+             #services-hero { padding: 5rem 0 3rem 0; }
+             #services-hero h1 { font-size: 2.8rem; }
+             #services-hero p { font-size: 1.1rem; }
+             .platform-list { gap: 0.8rem 1rem; }
+             .platform-btn { padding: 0.6rem 1.2rem; font-size: 0.9rem;}
+             .search-filter-container input[type="text"] { max-width: 90%; }
+             .services-table th, .services-table td { padding: 0.8rem 1rem; font-size: 0.9rem; }
+             .services-table .details-btn { padding: 0.3rem 0.6rem; font-size: 0.8rem;}
+             .modal-dialog { margin: 2rem auto; width: 95%; }
+             .modal-header { padding: 1rem 1.5rem; }
+             .modal-title { font-size: 1.5rem; }
+             .modal-body { padding: 1.5rem; max-height: 65vh; }
+             .modal-footer { padding: 1rem 1.5rem; text-align: center; }
+             .modal-footer .btn { width: 100%; margin: 0.5rem 0; }
+             #main-footer .footer-content { grid-template-columns: 1fr; text-align: center; }
+             #main-footer .footer-column h4 { text-align: center; }
+             #main-footer .footer-column h4::after { left: 50%; transform: translateX(-50%); }
+             #main-footer .footer-links { align-items: center; }
+             #main-footer .social-links { justify-content: center; }
+             #ad-banner { max-width: calc(100vw - 40px); left: 20px; bottom: 20px; padding: 0.9rem 1.2rem; }
+             #support-widget { bottom: 20px; right: 20px; }
+        }
+        @media (max-width: 480px) {
+             html { font-size: 15px; }
+             .section { padding: 4rem 0; }
+             .section-title { font-size: 2.2rem; }
+             #services-hero { padding: 4rem 0 2.5rem 0; }
+             #services-hero h1 { font-size: 2.4rem; line-height: 1.3; }
+             #services-hero p { font-size: 1.05rem; }
+             .platform-list { gap: 0.5rem 0.8rem; margin-bottom: 2rem;}
+             .platform-btn { padding: 0.5rem 1rem; font-size: 0.85rem;}
+             .search-filter-container { margin-bottom: 2rem; }
+             #services-table-section { padding: 2rem 0 4rem 0; }
+             .services-table th, .services-table td { padding: 0.7rem 0.8rem; font-size: 0.85rem; }
+             .services-table .details-btn { padding: 0.25rem 0.5rem; font-size: 0.75rem;}
+             .modal-body li strong { min-width: 80px; }
+             #ad-banner { padding: 0.8rem 1rem; gap: 0.8rem; bottom: 15px; left: 15px; }
+             #ad-banner p { font-size: 0.9rem; }
+             #close-ad-btn { font-size: 1.2rem; }
+             #support-widget { bottom: 15px; right: 15px; }
+             #support-toggle { width: 55px; height: 55px; font-size: 1.6rem;}
+             #support-options { bottom: 70px; gap: 10px; }
+             #support-options a { width: 45px; height: 45px; font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <nav id="navbar">
+                <a href="index.html" class="logo"><i class="fas fa-atom"></i>Quantum SMM</a>
+                <ul id="nav-links-desktop">
+                    <li><a href="index.html">Matrix</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+                <button class="menu-toggle" id="mobile-menu" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+        <ul id="mobile-nav-links">
+             <li><a href="index.html">Matrix</a></li>
+             <li><a href="services.html" class="active">Services</a></li>
+             <li><a href="index.html#features">Features</a></li>
+             <li><a href="about.html">About Us</a></li>
+             <li><a href="contact.html">Contact Us</a></li>
+             <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section id="services-hero">
+        <div class="container animated-element">
+            <h1>Our <span>Service</span> Catalog</h1>
+            <p>Explore a comprehensive range of SMM services designed for maximum impact.</p>
+        </div>
+    </section>
+
+    <!-- Platform Filter & Search -->
+    <section id="platform-filter" class="section-small-padding">
+        <div class="container">
+            <div class="platform-list animated-element">
+                <button class="platform-btn active" data-platform="all" title="Show All Services"><i class="fas fa-globe"></i> All</button>
+                <button class="platform-btn platform-instagram" data-platform="Instagram" title="Instagram Services"><i class="fab fa-instagram"></i> Instagram</button>
+                <button class="platform-btn platform-facebook" data-platform="Facebook" title="Facebook Services"><i class="fab fa-facebook"></i> Facebook</button>
+                <button class="platform-btn platform-youtube" data-platform="YouTube" title="YouTube Services"><i class="fab fa-youtube"></i> YouTube</button>
+                <button class="platform-btn platform-tiktok" data-platform="TikTok" title="TikTok Services"><i class="fab fa-tiktok"></i> TikTok</button>
+                <button class="platform-btn platform-twitter" data-platform="Twitter" title="X (Twitter) Services"><i class="fab fa-twitter"></i> X</button>
+                <button class="platform-btn platform-telegram" data-platform="Telegram" title="Telegram Services"><i class="fab fa-telegram"></i> Telegram</button>
+                <button class="platform-btn platform-spotify" data-platform="Spotify" title="Spotify Services"><i class="fab fa-spotify"></i> Spotify</button>
+                <button class="platform-btn platform-pinterest" data-platform="Pinterest" title="Pinterest Services"><i class="fab fa-pinterest"></i> Pinterest</button>
+                <button class="platform-btn platform-website" data-platform="Website" title="Website Traffic"><i class="fas fa-mouse-pointer"></i> Traffic</button>
+                <button class="platform-btn platform-reddit" data-platform="Reddit" title="Reddit Services"><i class="fab fa-reddit-alien"></i> Reddit</button>
+                <button class="platform-btn platform-linkedin" data-platform="LinkedIn" title="LinkedIn Services"><i class="fab fa-linkedin"></i> LinkedIn</button>
+                <button class="platform-btn platform-discord" data-platform="Discord" title="Discord Services"><i class="fab fa-discord"></i> Discord</button>
+                <button class="platform-btn platform-other" data-platform="Other" title="Other Services"><i class="fas fa-asterisk"></i> Other</button>
+            </div>
+            <div class="search-filter-container animated-element delay-1">
+                <input type="text" id="service-search" placeholder="Search by Service Name or ID (e.g., 'Instagram Followers' or '101')...">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Table Section -->
+    <section id="services-table-section">
+        <div class="container">
+             <p class="text-center" style="color: var(--text-medium); margin-top: -3rem; margin-bottom: 3rem;">Rates are per 1000 units unless specified. Avg. Time is estimated.</p>
+            <div class="services-table-wrapper animated-element delay-2">
+                <table class="services-table" id="smm-services-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Service Name</th>
+                            <th>Rate / 1K</th>
+                            <th class="min-max">Min/Max</th>
+                            <th class="avg-time">Avg. Time</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Instagram -->
+                        <tr data-platform="Instagram"><td>101</td><td class="service-name">Instagram Followers [Real Mix - HQ - Max 10k]</td><td class="rate">$1.80</td><td class="min-max">100/10k</td><td class="avg-time">0-6 Hrs</td><td><button class="details-btn" data-service-id="101"><i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="Instagram"><td>102</td><td class="service-name">Instagram Likes [HQ - Instant - Max 50k]</td><td class="rate">$0.08</td><td class="min-max">50/50k</td><td class="avg-time">0-1 Hrs</td><td><button class="details-btn" data-service-id="102"><i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="Instagram"><td>105</td><td class="service-name">Instagram Story Views [Fast - Max 100k]</td><td class="rate">$0.05</td><td class="min-max">100/100k</td><td class="avg-time">0-1 Hrs</td><td><button class="details-btn" data-service-id="105">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="Instagram"><td>108</td><td class="service-name">Instagram Reel Likes + Views [HQ - Bonus Views]</td><td class="rate">$0.15</td><td class="min-max">100/20k</td><td class="avg-time">0-2 Hrs</td><td><button class="details-btn" data-service-id="108">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="Instagram"><td>112</td><td class="service-name">Instagram Comments [Custom - HQ Emojis/Text]</td><td class="rate">$5.00</td><td class="min-max">10/500</td><td class="avg-time">1-12 Hrs</td><td><button class="details-btn" data-service-id="112">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <!-- Facebook -->
+                        <tr data-platform="Facebook"><td>201</td><td class="service-name">Facebook Page Likes [Profile Based - Max 5k]</td><td class="rate">$2.50</td><td class="min-max">100/5k</td><td class="avg-time">1-12 Hrs</td><td><button class="details-btn" data-service-id="201">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="Facebook"><td>203</td><td class="service-name">Facebook Post Likes [Emoji Mix - Max 20k]</td><td class="rate">$0.50</td><td class="min-max">50/20k</td><td class="avg-time">0-3 Hrs</td><td><button class="details-btn" data-service-id="203">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="Facebook"><td>207</td><td class="service-name">Facebook Video Views [Watch Time Eligible]</td><td class="rate">$0.60</td><td class="min-max">1k/1M</td><td class="avg-time">6-24 Hrs</td><td><button class="details-btn" data-service-id="207">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <!-- YouTube -->
+                        <tr data-platform="YouTube"><td>301</td><td class="service-name">YouTube Views [High Retention - Normal - Max 1M]</td><td class="rate">$1.20</td><td class="min-max">500/1M</td><td class="avg-time">6-24 Hrs</td><td><button class="details-btn" data-service-id="301">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="YouTube"><td>302</td><td class="service-name">YouTube Subscribers [Real Looking - Gradual - Max 1k]</td><td class="rate">$15.00</td><td class="min-max">50/1k</td><td class="avg-time">24-72 Hrs</td><td><button class="details-btn" data-service-id="302">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="YouTube"><td>305</td><td class="service-name">YouTube Likes [Real - Stable - Max 5k]</td><td class="rate">$4.00</td><td class="min-max">50/5k</td><td class="avg-time">6-24 Hrs</td><td><button class="details-btn" data-service-id="305">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="YouTube"><td>308</td><td class="service-name">YouTube Watch Time Hours [4000 Hours Package]</td><td class="rate">$30.00</td><td class="min-max">1000/4000</td><td class="avg-time">3-7 Days</td><td><button class="details-btn" data-service-id="308">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <!-- TikTok -->
+                        <tr data-platform="TikTok"><td>401</td><td class="service-name">TikTok Followers [HQ - Fast - Max 20k]</td><td class="rate">$2.00</td><td class="min-max">100/20k</td><td class="avg-time">0-6 Hrs</td><td><button class="details-btn" data-service-id="401">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="TikTok"><td>402</td><td class="service-name">TikTok Video Views [Super Fast - Max 10M]</td><td class="rate">$0.02</td><td class="min-max">1k/10M</td><td class="avg-time">0-1 Hrs</td><td><button class="details-btn" data-service-id="402">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="TikTok"><td>404</td><td class="service-name">TikTok Likes [HQ - Instant - Max 100k]</td><td class="rate">$0.90</td><td class="min-max">100/100k</td><td class="avg-time">0-2 Hrs</td><td><button class="details-btn" data-service-id="404">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <!-- Telegram -->
+                        <tr data-platform="Telegram"><td>501</td><td class="service-name">Telegram Channel Members [Non Drop - Real Look - Max 50k]</td><td class="rate">$1.50</td><td class="min-max">100/50k</td><td class="avg-time">0-12 Hrs</td><td><button class="details-btn" data-service-id="501"Details ><i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="Telegram"><td>502</td><td class="service-name">Telegram Post Views [Last 10 Posts - Instant - Max 1M]</td><td class="rate">$0.04</td><td class="min-max">100/1M</td><td class="avg-time">0-1 Hrs</td><td><button class="details-btn" data-service-id="502">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="Telegram"><td>505</td><td class="service-name">Telegram Group Members [Targeted Add - Invite]</td><td class="rate">$4.00</td><td class="min-max">200/10k</td><td class="avg-time">12-48 Hrs</td><td><button class="details-btn" data-service-id="505">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <!-- Website Traffic -->
+                         <tr data-platform="Website"><td>601</td><td class="service-name">Website Traffic [Worldwide Mix - Max 500k]</td><td class="rate">$0.30</td><td class="min-max">1k/500k</td><td class="avg-time">24 Hrs Start</td><td><button class="details-btn" data-service-id="601">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                         <tr data-platform="Website"><td>603</td><td class="service-name">Website Traffic [USA Geo Targeted - Low Bounce]</td><td class="rate">$1.50</td><td class="min-max">1k/100k</td><td class="avg-time">24-48 Hrs</td><td><button class="details-btn" data-service-id="603">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                         <!-- Spotify -->
+                          <tr data-platform="Spotify"><td>701</td><td class="service-name">Spotify Track Plays [Premium - Stable - Max 1M]</td><td class="rate">$0.80</td><td class="min-max">1k/1M</td><td class="avg-time">12-48 Hrs</td><td><button class="details-btn" data-service-id="701">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                           <tr data-platform="Spotify"><td>704</td><td class="service-name">Spotify Playlist Followers [Real Looking - Gradual]</td><td class="rate">$5.00</td><td class="min-max">50/5k</td><td class="avg-time">2-5 Days</td><td><button class="details-btn" data-service-id="704">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <!-- Twitter -->
+                         <tr data-platform="Twitter"><td>801</td><td class="service-name">X (Twitter) Followers [HQ Profile - Gradual]</td><td class="rate">$3.00</td><td class="min-max">100/5k</td><td class="avg-time">1-3 Days</td><td><button class="details-btn" data-service-id="801">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                         <tr data-platform="Twitter"><td>802</td><td class="service-name">X (Twitter) Likes [HQ - Instant]</td><td class="rate">$2.50</td><td class="min-max">50/10k</td><td class="avg-time">0-2 Hrs</td><td><button class="details-btn" data-service-id="802">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <!-- Pinterest -->
+                         <tr data-platform="Pinterest"><td>901</td><td class="service-name">Pinterest Followers [Real Active Users]</td><td class="rate">$6.00</td><td class="min-max">50/2k</td><td class="avg-time">2-5 Days</td><td><button class="details-btn" data-service-id="901">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                         <tr data-platform="Pinterest"><td>902</td><td class="service-name">Pinterest Pin Saves/Repins [HQ]</td><td class="rate">$4.00</td><td class="min-max">50/5k</td><td class="avg-time">1-3 Days</td><td><button class="details-btn" data-service-id="902">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <!-- Reddit -->
+                         <tr data-platform="Reddit"><td>1001</td><td class="service-name">Reddit Post Upvotes [HQ - Targeted Option]</td><td class="rate">$8.00</td><td class="min-max">10/500</td><td class="avg-time">1-6 Hrs</td><td><button class="details-btn" data-service-id="1001">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                         <tr data-platform="Reddit"><td>1003</td><td class="service-name">Reddit Subscribers [Subreddit Followers]</td><td class="rate">$12.00</td><td class="min-max">20/1k</td><td class="avg-time">2-7 Days</td><td><button class="details-btn" data-service-id="1003">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <!-- Other -->
+                         <tr data-platform="Other"><td>9001</td><td class="service-name">Custom Service [Contact Support]</td><td class="rate">Varies</td><td class="min-max">N/A</td><td class="avg-time">Discuss</td><td><button class="details-btn" data-service-id="9001">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                         <tr data-platform="Discord"><td>1101</td><td class="service-name">Discord Server Members [Online - Boost]</td><td class="rate">$10.00</td><td class="min-max">50/1k</td><td class="avg-time">1-12 Hrs</td><td><button class="details-btn" data-service-id="1101">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                         <tr data-platform="LinkedIn"><td>1201</td><td class="service-name">LinkedIn Connections [Profile Targeted Option]</td><td class="rate">$15.00</td><td class="min-max">50/500</td><td class="avg-time">3-7 Days</td><td><button class="details-btn" data-service-id="1201">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                    </tbody>
+                </table>
+            </div>
+             <p id="no-results-message">No services found matching your criteria.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                 <div class="footer-logo">Quantum SMM</div>
+                 <div class="footer-column footer-about">
+                    <h4>About Us</h4>
+                    <p>Quantum SMM provides elite social media marketing services, focusing on speed, quality, and reliability for rapid growth.</p>
+                 </div>
+                 <div class="footer-column footer-links-section">
+                     <h4>Quick Links</h4>
+                     <ul class="footer-links">
+                         <li><a href="index.html">Home</a></li>
+                         <li><a href="services.html">Services</a></li>
+                         <li><a href="about.html">About Us</a></li>
+                         <li><a href="contact.html">Contact Us</a></li>
+                         <li><a href="index.html#faq">FAQ</a></li>
+                         <li><a href="#">Terms of Service</a></li>
+                         <li><a href="#">Privacy Policy</a></li>
+                     </ul>
+                 </div>
+                 <div class="footer-column footer-links-section"> <!-- Service Categories Column -->
+                      <h4>Service Categories</h4>
+                      <ul class="footer-links">
+                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('Instagram'); return false;">Instagram</a></li>
+                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('Facebook'); return false;">Facebook</a></li>
+                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('YouTube'); return false;">YouTube</a></li>
+                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('TikTok'); return false;">TikTok</a></li>
+                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('Telegram'); return false;">Telegram</a></li>
+                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('all'); return false;">View All</a></li>
+                      </ul>
+                  </div>
+                 <div class="footer-column footer-contact">
+                    <h4>Connect & Support</h4>
+                     <ul class="social-links">
+                         <li><a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+                         <li><a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a></li>
+                         <li><a href="tel:YOUR_PHONE_NUMBER" aria-label="Call"><i class="fas fa-phone"></i></a></li>
+                         <li><a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                     </ul>
+                     <p><a href="mailto:support@quantumsmm.com">support@quantumsmm.com</a></p>
+                 </div>
+                 <p class="copyright">System Build: v3.19 | © <span id="year"></span> Quantum SMM Network. All Rights Reserved. | Design Inspiration by Quantum Core Labs</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Support Widget -->
+    <div id="support-widget">
+        <button id="support-toggle" aria-label="Open Support Options"> <i class="fas fa-headset"></i> </button>
+        <div id="support-options">
+            <a href="tel:YOUR_PHONE_NUMBER" class="call" aria-label="Call Us" title="Call Us"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="whatsapp" aria-label="Chat on WhatsApp" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" class="telegram" aria-label="Chat on Telegram" title="Chat on Telegram"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+    </div>
+
+    <!-- Ad Banner -->
+    <div id="ad-banner">
+         <p><strong>Flash Sale!</strong> Limited time offer on YouTube Views! <a href="services.html#services-table-section" onclick="filterPlatformFromLink('YouTube'); return false;">Check Now!</a></p> <!-- Updated Link -->
+        <button id="close-ad-btn" aria-label="Close Ad"> <i class="fas fa-times"></i> </button>
+    </div>
+
+    <!-- Details Modal -->
+    <div class="modal" id="service-details-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Service Details</h5>
+                    <button type="button" class="modal-close-btn" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body-content">
+                    <!-- Content Loaded via JS -->
+                    <p>Loading service details...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modal-close-btn">Close</button>
+                    <a href="#" id="modal-order-btn" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+    const yearElement = document.getElementById('year');
+    if (yearElement) { yearElement.textContent = new Date().getFullYear(); }
+
+    // --- Mobile Menu Logic ---
+    const menuToggle = document.getElementById('mobile-menu');
+    const mobileNav = document.getElementById('mobile-nav-links');
+    const body = document.body;
+    if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+            mobileNav.classList.toggle('active');
+            body.classList.toggle('mobile-menu-active', !isExpanded);
+            const icon = menuToggle.querySelector('i');
+            if (icon) { icon.className = !isExpanded ? 'fas fa-times' : 'fas fa-bars'; }
+        });
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.getAttribute('href')?.startsWith('#') || link.classList.contains('btn') || link.getAttribute('href')?.endsWith('.html')) {
+                    if (mobileNav.classList.contains('active')) { menuToggle.click(); }
+                }
+            });
+        });
+    }
+
+    // --- Sticky Header Logic & Filter Bar Adjustment ---
+    const header = document.getElementById('main-header');
+    let headerInitialHeight = 0;
+    const filterSection = document.getElementById('platform-filter'); // Get filter section
+
+    if(header) {
+        headerInitialHeight = header.offsetHeight;
+        if(filterSection) {
+            filterSection.style.top = `${headerInitialHeight}px`; // Initial sticky top position
+        }
+    }
+
+    function handleScroll() {
+        if (!header) return;
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const isScrolled = scrollTop > 50;
+        header.classList.toggle('scrolled', isScrolled);
+
+        // Adjust sticky top for filter section when header shrinks/grows
+        if(filterSection && header) {
+            const currentHeaderHeight = header.offsetHeight;
+            // Only update if the filter section has 'sticky' position
+            if (window.getComputedStyle(filterSection).position === 'sticky') {
+                 filterSection.style.top = `${currentHeaderHeight}px`;
+            }
+        }
+        // No active link highlighting based on scroll needed for services page
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // --- Active Nav Link Highlighting (Simple for Services Page) ---
+    function setActiveLinkServicePage() {
+        const serviceLinksDesktop = document.querySelectorAll('#nav-links-desktop a[href="services.html"]');
+        const serviceLinksMobile = document.querySelectorAll('#mobile-nav-links a[href="services.html"]');
+        const allNavLinks = document.querySelectorAll('#nav-links-desktop a, #mobile-nav-links a');
+        allNavLinks.forEach(link => link.classList.remove('active'));
+        serviceLinksDesktop.forEach(link => link?.classList.add('active'));
+        serviceLinksMobile.forEach(link => link?.classList.add('active'));
+    }
+    setActiveLinkServicePage(); // Call on load
+
+    // --- Intersection Observer for Animations ---
+    const animatedElements = document.querySelectorAll('.animated-element');
+    if ('IntersectionObserver' in window) {
+        const observerOptions = { root: null, threshold: 0.1, rootMargin: "0px 0px -30px 0px" };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // observer.unobserve(entry.target); // Uncomment for one-time animation
+                } else {
+                    // entry.target.classList.remove('visible'); // Uncomment to re-animate
+                }
+            });
+        }, observerOptions);
+        animatedElements.forEach(elem => { observer.observe(elem); });
+    } else {
+        animatedElements.forEach(elem => { elem.classList.add('visible'); });
+    }
+
+    // --- Support Widget Logic ---
+    const supportWidget = document.getElementById('support-widget');
+    const supportToggle = document.getElementById('support-toggle');
+    const supportIcon = supportToggle ? supportToggle.querySelector('i') : null;
+    if (supportWidget && supportToggle && supportIcon) {
+       supportToggle.addEventListener('click', (e) => {
+           e.stopPropagation();
+           const isActive = supportWidget.classList.toggle('active');
+           supportIcon.className = isActive ? 'fas fa-times' : 'fas fa-headset';
+           supportToggle.setAttribute('aria-label', isActive ? 'Close Support Options' : 'Open Support Options');
+       });
+        document.addEventListener('click', (event) => {
+            if (supportWidget.classList.contains('active') && !supportWidget.contains(event.target)) {
+                supportToggle.click();
+            }
+        });
+        const supportOptions = document.getElementById('support-options');
+        if(supportOptions) {
+            supportOptions.addEventListener('click', (e) => e.stopPropagation());
+        }
+    }
+
+    // --- Ad Banner Logic ---
+    const adBanner = document.getElementById('ad-banner');
+    const closeAdBtn = document.getElementById('close-ad-btn');
+    const AD_CLOSED_KEY = 'quantumAdClosed_v1';
+    let adShowTimeout;
+    if (adBanner) {
+        function showAdBanner() {
+            if (adBanner && !adBanner.classList.contains('visible') && !adBanner.classList.contains('hidden-permanently')) {
+                 try {
+                     if (localStorage.getItem(AD_CLOSED_KEY) !== 'true') {
+                         adBanner.classList.add('visible');
+                     } else {
+                        adBanner.style.display = 'none';
+                        adBanner.classList.add('hidden-permanently');
+                     }
+                 } catch (e) {
+                     console.warn('localStorage access error, showing ad.');
+                     adBanner.classList.add('visible');
+                 }
+            }
+        }
+       try { if (localStorage.getItem(AD_CLOSED_KEY) === 'true') { adBanner.style.display = 'none'; adBanner.classList.add('hidden-permanently'); } }
+       catch(e) { console.warn("localStorage error on initial check"); }
+       if (!adBanner.classList.contains('hidden-permanently')) {
+           adShowTimeout = setTimeout(showAdBanner, 1500); // Show after 1.5 seconds
+       }
+       if (closeAdBtn) {
+           closeAdBtn.addEventListener('click', () => {
+                clearTimeout(adShowTimeout);
+                adBanner.classList.remove('visible');
+                adBanner.classList.add('hidden');
+                adBanner.classList.add('hidden-permanently');
+                try { localStorage.setItem(AD_CLOSED_KEY, 'true'); }
+                catch (e) { console.warn('localStorage access error.'); }
+                setTimeout(() => { if(adBanner) adBanner.style.display = 'none'; }, 500); // Hide after animation
+           });
+       }
+    }
+
+    // --- Service Page Specific JavaScript ---
+    const platformBtns = document.querySelectorAll('.platform-btn');
+    const searchInput = document.getElementById('service-search');
+    const serviceTableBody = document.querySelector('#smm-services-table tbody');
+    const serviceRows = serviceTableBody ? Array.from(serviceTableBody.querySelectorAll('tr')) : [];
+    const noResultsMsg = document.getElementById('no-results-message');
+    const modal = document.getElementById('service-details-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalBody = document.getElementById('modal-body-content');
+    const modalOrderBtn = document.getElementById('modal-order-btn');
+    const modalCloseBtns = document.querySelectorAll('.modal-close-btn');
+
+    // --- Service Details Data (Keep updated with all services) ---
+    const serviceDetailsData = {
+         '101': { title: 'IG Followers [Real Mix - HQ]', rate: '$1.80', minmax: '100 / 10k', avgTime: '0-6 Hrs', description: 'High-quality mixed followers to boost your Instagram presence. Gradual delivery for safety. Good retention, may have minor drops over time. Profile links only.' },
+         '102': { title: 'IG Likes [HQ - Instant]', rate: '$0.08', minmax: '50 / 50k', avgTime: '0-1 Hrs', description: 'Instant high-quality likes for your Instagram posts. Helps increase post visibility and engagement. Post links only.' },
+         '105': { title: 'IG Story Views [Fast]', rate: '$0.05', minmax: '100 / 100k', avgTime: '0-1 Hrs', description: 'Boost your Instagram story views quickly. Enter username only. Views are added fast.' },
+         '108': { title: 'IG Reel Likes + Views [HQ]', rate: '$0.15', minmax: '100 / 20k', avgTime: '0-2 Hrs', description: 'Get likes for your Reels, includes bonus views. Great for engagement boost. Reel link required.' },
+         '112': { title: 'IG Comments [Custom HQ]', rate: '$5.00', minmax: '10 / 500', avgTime: '1-12 Hrs', description: 'Provide your own custom comments (line by line). High-quality profiles will post them. Post link required.' },
+         '201': { title: 'FB Page Likes [Profile Based]', rate: '$2.50', minmax: '100 / 5k', avgTime: '1-12 Hrs', description: 'Likes/Followers from profiles for your Facebook Page. Increases page authority and reach. Page link only.' },
+         '203': { title: 'FB Post Likes [Emoji Mix]', rate: '$0.50', minmax: '50 / 20k', avgTime: '0-3 Hrs', description: 'Mixed emoji reactions (Like, Love, Haha, etc.) for your Facebook posts. Boosts engagement signals. Post link only.' },
+         '207': { title: 'FB Video Views [Watch Time]', rate: '$0.60', minmax: '1k / 1M', avgTime: '6-24 Hrs', description: 'Views that contribute towards watch time metrics. Good for monetization requirements (check eligibility). Video link required.' },
+         '301': { title: 'YT Views [High Retention]', rate: '$1.20', minmax: '500 / 1M', avgTime: '6-24 Hrs', description: 'High-retention views to improve video ranking and watch time. Delivery starts within hours. Video link only. Stable source.' },
+         '302': { title: 'YT Subscribers [Real Looking]', rate: '$15.00', minmax: '50 / 1k', avgTime: '24-72 Hrs', description: 'Subscribers from real-looking profiles added gradually for safety. Helps grow your channel base. Channel link only. May experience some drops.' },
+         '305': { title: 'YT Likes [Real - Stable]', rate: '$4.00', minmax: '50 / 5k', avgTime: '6-24 Hrs', description: 'Likes from real-looking accounts to boost video engagement. Stable delivery. Video link required.' },
+         '308': { title: 'YT Watch Time Hours [4000 Hrs]', rate: '$30.00 (per 1k hours)', minmax: '1000 / 4000', avgTime: '3-7 Days', description: 'Package to help reach YouTube monetization requirements. Requires video longer than 1 hour. Delivered gradually.' },
+         '401': { title: 'TikTok Followers [HQ - Fast]', rate: '$2.00', minmax: '100 / 20k', avgTime: '0-6 Hrs', description: 'High-quality followers delivered quickly to enhance your TikTok profile authority. Profile link only.' },
+         '402': { title: 'TikTok Video Views [Super Fast]', rate: '$0.02', minmax: '1k / 10M', avgTime: '0-1 Hrs', description: 'Boost your TikTok video views rapidly. Excellent for increasing visibility and hitting FYP potential. Video link only.' },
+         '404': { title: 'TikTok Likes [HQ - Instant]', rate: '$0.90', minmax: '100 / 100k', avgTime: '0-2 Hrs', description: 'High-quality likes for your TikTok videos, delivered instantly. Video link required.' },
+         '501': { title: 'Telegram Members [Non Drop - Real Look]', rate: '$1.50', minmax: '100 / 50k', avgTime: '0-12 Hrs', description: 'Add members that look real to your public Telegram channel or group. Good stability reported. Invite link required.' },
+         '502': { title: 'Telegram Post Views [Last 10 Posts]', rate: '$0.04', minmax: '100 / 1M', avgTime: '0-1 Hrs', description: 'Instantly increase views on your latest Telegram posts (up to last 10). Great for channel activity boost. Public channel link required.' },
+         '505': { title: 'Telegram Group Members [Targeted Add]', rate: '$4.00', minmax: '200 / 10k', avgTime: '12-48 Hrs', description: 'Add members by inviting from similar target groups (provide source group links). Higher quality but slower. Group must allow adding members.' },
+         '601': { title: 'Website Traffic [Worldwide Mix]', rate: '$0.30', minmax: '1k / 500k', avgTime: '24 Hrs Start', description: 'Drive general worldwide traffic to your website. Mix of desktop and mobile sources, referrers may vary. Enter website URL.' },
+         '603': { title: 'Website Traffic [USA Geo Targeted]', rate: '$1.50', minmax: '1k / 100k', avgTime: '24-48 Hrs', description: 'Traffic primarily from USA IPs. Generally lower bounce rate compared to worldwide mix. Enter website URL.' },
+         '701': { title: 'Spotify Track Plays [Premium]', rate: '$0.80', minmax: '1k / 1M', avgTime: '12-48 Hrs', description: 'Increase plays on your Spotify track from premium-looking accounts. Stable delivery, helps with algorithm visibility. Track link required.' },
+         '704': { title: 'Spotify Playlist Followers [Real Looking]', rate: '$5.00', minmax: '50 / 5k', avgTime: '2-5 Days', description: 'Increase followers on your Spotify playlist. Added gradually from real-looking profiles. Playlist link required.' },
+         '801': { title: 'X (Twitter) Followers [HQ Profile]', rate: '$3.00', minmax: '100 / 5k', avgTime: '1-3 Days', description: 'Followers from high-quality looking profiles added gradually. Good for profile authority. Twitter profile link.' },
+         '802': { title: 'X (Twitter) Likes [HQ - Instant]', rate: '$2.50', minmax: '50 / 10k', avgTime: '0-2 Hrs', description: 'High-quality likes for your Tweets/posts. Delivered quickly. Tweet/post link required.' },
+         '901': { title: 'Pinterest Followers [Real Active Users]', rate: '$6.00', minmax: '50 / 2k', avgTime: '2-5 Days', description: 'Gain followers from potentially active Pinterest users. Helps board visibility. Pinterest profile link.' },
+         '902': { title: 'Pinterest Pin Saves/Repins [HQ]', rate: '$4.00', minmax: '50 / 5k', avgTime: '1-3 Days', description: 'Increase saves or repins for your Pinterest Pin. Boosts pin circulation. Pin URL required.' },
+         '1001': { title: 'Reddit Post Upvotes [HQ]', rate: '$8.00', minmax: '10 / 500', avgTime: '1-6 Hrs', description: 'Increase upvotes on your Reddit post from high-quality looking accounts. Option to specify target subreddit for better relevance (mention in order notes). Post link required.' },
+         '1003': { title: 'Reddit Subscribers [Subreddit Followers]', rate: '$12.00', minmax: '20 / 1k', avgTime: '2-7 Days', description: 'Increase subscribers (followers) for your subreddit. Gradual delivery. Subreddit link required.' },
+         '1101': { title: 'Discord Server Members [Online - Boost]', rate: '$10.00', minmax: '50 / 1k', avgTime: '1-12 Hrs', description: 'Add members to your Discord server who appear online for a duration. Requires valid server invite link.' },
+         '1201': { title: 'LinkedIn Connections [Profile Targeted Option]', rate: '$15.00', minmax: '50 / 500', avgTime: '3-7 Days', description: 'Increase connections on your LinkedIn profile. Option to target based on industry or location (contact support). Profile URL required.' },
+         '9001': { title: 'Custom Service / Inquiry', rate: 'Varies', minmax: 'N/A', avgTime: 'Discuss', description: 'Need something not listed? Have a large bulk order? Contact our support team via WhatsApp or Telegram to discuss custom requirements and pricing.' }
+    };
+
+    // Filter Function
+    function filterServices() {
+        const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const activePlatformBtn = document.querySelector('.platform-btn.active');
+        const selectedPlatform = activePlatformBtn ? activePlatformBtn.dataset.platform : 'all';
+        let visibleCount = 0;
+
+        serviceRows.forEach(row => {
+            const id = row.cells[0].textContent.toLowerCase();
+            const name = row.cells[1].textContent.toLowerCase();
+            const platform = row.dataset.platform ? row.dataset.platform.toLowerCase() : '';
+            const matchesSearch = searchTerm === '' || name.includes(searchTerm) || id.includes(searchTerm);
+            const matchesPlatform = selectedPlatform === 'all' || platform === selectedPlatform.toLowerCase();
+
+            if (matchesSearch && matchesPlatform) {
+                row.classList.remove('hidden');
+                visibleCount++;
+            } else {
+                row.classList.add('hidden');
+            }
+        });
+        if (noResultsMsg) {
+            noResultsMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+    }
+
+    // Platform Button Listeners
+    platformBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            platformBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterServices();
+        });
+    });
+
+    // Search Input Listener
+    if (searchInput) {
+        let debounceTimer;
+        searchInput.addEventListener('keyup', () => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(filterServices, 300); // Debounce
+        });
+    }
+
+    // Basic cookie function (use js-cookie library for better management)
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        // Ensure value is stringified JSON
+        const stringValue = typeof value === 'string' ? value : JSON.stringify(value);
+        document.cookie = name + "=" + (stringValue || "") + expires + "; path=/; SameSite=Lax";
+    }
+
+
+    // Function to set cookie and redirect
+    function setOrderCookieAndRedirect(id, name, rate, minMax) {
+        const rateValue = parseFloat(String(rate).replace('$', '')) || 0;
+        const minMaxValue = minMax || 'N/A'; // Get min/max from details
+
+        const orderData = {
+            serviceId: id,
+            serviceName: name,
+            ratePer1000: rateValue,
+            minMax: minMaxValue // Include min/max in cookie
+        };
+        setCookie('pendingOrder', orderData, 1); // Store data as JSON string
+        window.location.href = 'checkout.html'; // Redirect to checkout
+    }
+
+
+    // Modal Logic
+    function openModal(serviceId) {
+         const details = serviceDetailsData[serviceId];
+         if (modal && details && modalTitle && modalBody && modalOrderBtn) {
+             modalTitle.textContent = details.title || `Service #${serviceId}`;
+             let bodyHTML = `
+                 <ul>
+                     <li><strong>ID:</strong> ${serviceId}</li>
+                     <li><strong>Rate:</strong> ${details.rate || 'N/A'} / 1K</li>
+                     <li><strong>Min/Max Order:</strong> ${details.minmax || 'N/A'}</li>
+                     <li><strong>Avg. Time:</strong> ${details.avgTime || 'N/A'}</li>
+                 </ul>
+                 <h5>Description</h5>
+                 <p class="description">${details.description || 'No detailed description available.'}</p>
+             `;
+             modalBody.innerHTML = bodyHTML;
+
+             // Update order button behavior
+             modalOrderBtn.textContent = "Order This Service";
+             modalOrderBtn.href = "#"; // Use JS for action
+             modalOrderBtn.onclick = (e) => {
+                 e.preventDefault(); // Prevent default link action
+                 setOrderCookieAndRedirect(serviceId, details.title, details.rate, details.minmax);
+                 closeModal();
+             };
+
+             modal.classList.add('show');
+             body.classList.add('modal-open');
+         } else if (modal) {
+              modalTitle.textContent = `Service #${serviceId}`;
+              modalBody.innerHTML = `<p>Details for this service are currently unavailable. Please contact support.</p>`;
+              modalOrderBtn.textContent = "Contact Support";
+              modalOrderBtn.href = 'contact.html';
+              modalOrderBtn.onclick = null; // Clear previous handler
+              modal.classList.add('show');
+              body.classList.add('modal-open');
+         }
+    }
+
+    function closeModal() {
+        if (modal) { modal.classList.remove('show'); body.classList.remove('modal-open'); }
+    }
+
+    // Modal Event Listeners
+    if (serviceTableBody) {
+         serviceTableBody.addEventListener('click', (event) => {
+             if (event.target.matches('.details-btn') || event.target.closest('.details-btn')) {
+                 const button = event.target.closest('.details-btn');
+                 const serviceId = button.dataset.serviceId;
+                 openModal(serviceId);
+             }
+         });
+    }
+    modalCloseBtns.forEach(btn => btn.addEventListener('click', closeModal));
+    if (modal) { modal.addEventListener('click', (event) => { if (event.target === modal) { closeModal(); } }); }
+
+    // Footer Link Filtering Function (make sure it's globally accessible)
+    window.filterPlatformFromLink = function(platformName) {
+        const targetButton = document.querySelector(`.platform-btn[data-platform="${platformName}"]`);
+        if (targetButton) {
+            platformBtns.forEach(b => b.classList.remove('active'));
+            targetButton.classList.add('active');
+            filterServices();
+            const filterSection = document.getElementById('platform-filter');
+            if (filterSection) {
+                // Check if the filter section is sticky before scrolling
+                const isSticky = window.getComputedStyle(filterSection).position === 'sticky';
+                const offset = isSticky && header ? header.offsetHeight : 0; // Account for sticky header height
+                const elementPosition = filterSection.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                    top: elementPosition - offset - 10, // Scroll slightly above the filter
+                    behavior: 'smooth'
+                });
+            }
+        }
+        // return false; // Not needed if called directly from JS onclick
+    }
+
+     // Check URL hash on load for filtering from footer link
+     if(window.location.hash === '#platform-filter') {
+         // You might need a more robust way to get the platform name if it's not passed
+         // For now, this just scrolls to the filter section
+         const filterSection = document.getElementById('platform-filter');
+          if (filterSection) {
+            setTimeout(() => { // Delay scroll slightly to allow layout shifts
+                 const offset = header ? header.offsetHeight : 0;
+                 const elementPosition = filterSection.getBoundingClientRect().top + window.pageYOffset;
+                 window.scrollTo({
+                    top: elementPosition - offset - 10,
+                    behavior: 'smooth'
+                 });
+            }, 100);
+          }
+     }
+
+}); // End DOMContentLoaded
+</script>
+
+
+</body>
+</html>
