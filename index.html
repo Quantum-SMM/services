@@ -5,17 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum SMM Services - Accelerate Your Growth</title>
     <meta name="description" content="Browse Quantum SMM's extensive list of high-performance SMM services. Filter by platform, search by ID or name, and view detailed service information instantly.">
-
-    <!-- Favicon -->
+    
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22><stop offset=%220%25%22 style=%22stop-color:%2300f0ff;stop-opacity:1%22 /><stop offset=%22100%25%22 style=%22stop-color:%23a855f7;stop-opacity:1%22 /></linearGradient></defs><path fill=%22url(%23g)%22 d=%22M50 0L61.8 38.2L100 38.2L69.1 61.8L80.9 100L50 76.4L19.1 100L30.9 61.8L0 38.2L38.2 38.2Z%22 /></svg>">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <style>
         /* --- Root Variables (Same as previous version) --- */
@@ -258,6 +253,9 @@
              #main-footer .social-links { justify-content: center; }
              #ad-banner { max-width: calc(100vw - 40px); left: 20px; bottom: 20px; padding: 0.9rem 1.2rem; }
              #support-widget { bottom: 20px; right: 20px; }
+             #main-footer p{
+                 text-align: center;
+             }
         }
         @media (max-width: 480px) {
              html { font-size: 15px; }
@@ -289,14 +287,15 @@
     <header id="main-header">
         <div class="container">
             <nav id="navbar">
-                <a href="index.html" class="logo"><i class="fas fa-atom"></i>Quantum SMM</a>
+                <a href="/" class="logo"><i class="fas fa-atom"></i>Quantum SMM</a>
                 <ul id="nav-links-desktop">
-                    <li><a href="index.html">Matrix</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/offers">Offers</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="https://utech-llc.github.io">U Tech</a></li>
                 </ul>
                 <button class="menu-toggle" id="mobile-menu" aria-label="Toggle menu" aria-expanded="false">
                     <i class="fas fa-bars"></i>
@@ -304,12 +303,13 @@
             </nav>
         </div>
         <ul id="mobile-nav-links">
-             <li><a href="index.html">Matrix</a></li>
-             <li><a href="services.html" class="active">Services</a></li>
-             <li><a href="index.html#features">Features</a></li>
-             <li><a href="about.html">About Us</a></li>
-             <li><a href="contact.html">Contact Us</a></li>
-             <li><a href="index.html#faq">FAQ</a></li>
+                 <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/offers">Offers</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="https://utech-llc.github.io">U Tech</a></li>
         </ul>
     </header>
 
@@ -341,7 +341,7 @@
                 <button class="platform-btn platform-other" data-platform="Other" title="Other Services"><i class="fas fa-asterisk"></i> Other</button>
             </div>
             <div class="search-filter-container animated-element delay-1">
-                <input type="text" id="service-search" placeholder="Search by Service Name or ID (e.g., 'Instagram Followers' or '101')...">
+                <input type="text" id="service-search" placeholder="Search by Service Name or ID (e.g., 'Facebook Followers' or '201')...">
             </div>
         </div>
     </section>
@@ -364,54 +364,22 @@
                     </thead>
                     <tbody>
                         <!-- Instagram -->
-                        <tr data-platform="Instagram"><td>101</td><td class="service-name">Instagram Followers [Real Mix - HQ - Max 10k]</td><td class="rate">$1.80</td><td class="min-max">100/10k</td><td class="avg-time">0-6 Hrs</td><td><button class="details-btn" data-service-id="101"><i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="Instagram"><td>102</td><td class="service-name">Instagram Likes [HQ - Instant - Max 50k]</td><td class="rate">$0.08</td><td class="min-max">50/50k</td><td class="avg-time">0-1 Hrs</td><td><button class="details-btn" data-service-id="102"><i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="Instagram"><td>105</td><td class="service-name">Instagram Story Views [Fast - Max 100k]</td><td class="rate">$0.05</td><td class="min-max">100/100k</td><td class="avg-time">0-1 Hrs</td><td><button class="details-btn" data-service-id="105">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="Instagram"><td>108</td><td class="service-name">Instagram Reel Likes + Views [HQ - Bonus Views]</td><td class="rate">$0.15</td><td class="min-max">100/20k</td><td class="avg-time">0-2 Hrs</td><td><button class="details-btn" data-service-id="108">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="Instagram"><td>112</td><td class="service-name">Instagram Comments [Custom - HQ Emojis/Text]</td><td class="rate">$5.00</td><td class="min-max">10/500</td><td class="avg-time">1-12 Hrs</td><td><button class="details-btn" data-service-id="112">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                
                         <!-- Facebook -->
-                        <tr data-platform="Facebook"><td>201</td><td class="service-name">Facebook Page Likes [Profile Based - Max 5k]</td><td class="rate">$2.50</td><td class="min-max">100/5k</td><td class="avg-time">1-12 Hrs</td><td><button class="details-btn" data-service-id="201">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="Facebook"><td>203</td><td class="service-name">Facebook Post Likes [Emoji Mix - Max 20k]</td><td class="rate">$0.50</td><td class="min-max">50/20k</td><td class="avg-time">0-3 Hrs</td><td><button class="details-btn" data-service-id="203">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="Facebook"><td>207</td><td class="service-name">Facebook Video Views [Watch Time Eligible]</td><td class="rate">$0.60</td><td class="min-max">1k/1M</td><td class="avg-time">6-24 Hrs</td><td><button class="details-btn" data-service-id="207">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="Facebook"><td>201</td><td class="service-name">Facebook Page Followers | 20K/Day | Instant | No Refill ⚡️</td><td class="rate">$0.99</td><td class="min-max">10/10k</td><td class="avg-time">0-3 Hrs</td><td><button class="details-btn" data-service-id="201">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                
                         <!-- YouTube -->
-                        <tr data-platform="YouTube"><td>301</td><td class="service-name">YouTube Views [High Retention - Normal - Max 1M]</td><td class="rate">$1.20</td><td class="min-max">500/1M</td><td class="avg-time">6-24 Hrs</td><td><button class="details-btn" data-service-id="301">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="YouTube"><td>302</td><td class="service-name">YouTube Subscribers [Real Looking - Gradual - Max 1k]</td><td class="rate">$15.00</td><td class="min-max">50/1k</td><td class="avg-time">24-72 Hrs</td><td><button class="details-btn" data-service-id="302">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="YouTube"><td>305</td><td class="service-name">YouTube Likes [Real - Stable - Max 5k]</td><td class="rate">$4.00</td><td class="min-max">50/5k</td><td class="avg-time">6-24 Hrs</td><td><button class="details-btn" data-service-id="305">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="YouTube"><td>308</td><td class="service-name">YouTube Watch Time Hours [4000 Hours Package]</td><td class="rate">$30.00</td><td class="min-max">1000/4000</td><td class="avg-time">3-7 Days</td><td><button class="details-btn" data-service-id="308">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="YouTube"><td>301</td><td class="service-name">YouTube Views | 20K/Day | Instant | No Refill⚡</td><td class="rate">$0.50</td><td class="min-max">500/10K</td><td class="avg-time">0-6 Hrs</td><td><button class="details-btn" data-service-id="301">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                   
                         <!-- TikTok -->
-                        <tr data-platform="TikTok"><td>401</td><td class="service-name">TikTok Followers [HQ - Fast - Max 20k]</td><td class="rate">$2.00</td><td class="min-max">100/20k</td><td class="avg-time">0-6 Hrs</td><td><button class="details-btn" data-service-id="401">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="TikTok"><td>402</td><td class="service-name">TikTok Video Views [Super Fast - Max 10M]</td><td class="rate">$0.02</td><td class="min-max">1k/10M</td><td class="avg-time">0-1 Hrs</td><td><button class="details-btn" data-service-id="402">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="TikTok"><td>404</td><td class="service-name">TikTok Likes [HQ - Instant - Max 100k]</td><td class="rate">$0.90</td><td class="min-max">100/100k</td><td class="avg-time">0-2 Hrs</td><td><button class="details-btn" data-service-id="404">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <!-- Telegram -->
-                        <tr data-platform="Telegram"><td>501</td><td class="service-name">Telegram Channel Members [Non Drop - Real Look - Max 50k]</td><td class="rate">$1.50</td><td class="min-max">100/50k</td><td class="avg-time">0-12 Hrs</td><td><button class="details-btn" data-service-id="501"Details ><i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="Telegram"><td>502</td><td class="service-name">Telegram Post Views [Last 10 Posts - Instant - Max 1M]</td><td class="rate">$0.04</td><td class="min-max">100/1M</td><td class="avg-time">0-1 Hrs</td><td><button class="details-btn" data-service-id="502">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <tr data-platform="Telegram"><td>505</td><td class="service-name">Telegram Group Members [Targeted Add - Invite]</td><td class="rate">$4.00</td><td class="min-max">200/10k</td><td class="avg-time">12-48 Hrs</td><td><button class="details-btn" data-service-id="505">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <!-- Website Traffic -->
-                         <tr data-platform="Website"><td>601</td><td class="service-name">Website Traffic [Worldwide Mix - Max 500k]</td><td class="rate">$0.30</td><td class="min-max">1k/500k</td><td class="avg-time">24 Hrs Start</td><td><button class="details-btn" data-service-id="601">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                         <tr data-platform="Website"><td>603</td><td class="service-name">Website Traffic [USA Geo Targeted - Low Bounce]</td><td class="rate">$1.50</td><td class="min-max">1k/100k</td><td class="avg-time">24-48 Hrs</td><td><button class="details-btn" data-service-id="603">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                         <!-- Spotify -->
-                          <tr data-platform="Spotify"><td>701</td><td class="service-name">Spotify Track Plays [Premium - Stable - Max 1M]</td><td class="rate">$0.80</td><td class="min-max">1k/1M</td><td class="avg-time">12-48 Hrs</td><td><button class="details-btn" data-service-id="701">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                           <tr data-platform="Spotify"><td>704</td><td class="service-name">Spotify Playlist Followers [Real Looking - Gradual]</td><td class="rate">$5.00</td><td class="min-max">50/5k</td><td class="avg-time">2-5 Days</td><td><button class="details-btn" data-service-id="704">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <!-- Twitter -->
-                         <tr data-platform="Twitter"><td>801</td><td class="service-name">X (Twitter) Followers [HQ Profile - Gradual]</td><td class="rate">$3.00</td><td class="min-max">100/5k</td><td class="avg-time">1-3 Days</td><td><button class="details-btn" data-service-id="801">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                         <tr data-platform="Twitter"><td>802</td><td class="service-name">X (Twitter) Likes [HQ - Instant]</td><td class="rate">$2.50</td><td class="min-max">50/10k</td><td class="avg-time">0-2 Hrs</td><td><button class="details-btn" data-service-id="802">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <!-- Pinterest -->
-                         <tr data-platform="Pinterest"><td>901</td><td class="service-name">Pinterest Followers [Real Active Users]</td><td class="rate">$6.00</td><td class="min-max">50/2k</td><td class="avg-time">2-5 Days</td><td><button class="details-btn" data-service-id="901">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                         <tr data-platform="Pinterest"><td>902</td><td class="service-name">Pinterest Pin Saves/Repins [HQ]</td><td class="rate">$4.00</td><td class="min-max">50/5k</td><td class="avg-time">1-3 Days</td><td><button class="details-btn" data-service-id="902">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <!-- Reddit -->
-                         <tr data-platform="Reddit"><td>1001</td><td class="service-name">Reddit Post Upvotes [HQ - Targeted Option]</td><td class="rate">$8.00</td><td class="min-max">10/500</td><td class="avg-time">1-6 Hrs</td><td><button class="details-btn" data-service-id="1001">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                         <tr data-platform="Reddit"><td>1003</td><td class="service-name">Reddit Subscribers [Subreddit Followers]</td><td class="rate">$12.00</td><td class="min-max">20/1k</td><td class="avg-time">2-7 Days</td><td><button class="details-btn" data-service-id="1003">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                        <!-- Other -->
-                         <tr data-platform="Other"><td>9001</td><td class="service-name">Custom Service [Contact Support]</td><td class="rate">Varies</td><td class="min-max">N/A</td><td class="avg-time">Discuss</td><td><button class="details-btn" data-service-id="9001">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                         <tr data-platform="Discord"><td>1101</td><td class="service-name">Discord Server Members [Online - Boost]</td><td class="rate">$10.00</td><td class="min-max">50/1k</td><td class="avg-time">1-12 Hrs</td><td><button class="details-btn" data-service-id="1101">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                         <tr data-platform="LinkedIn"><td>1201</td><td class="service-name">LinkedIn Connections [Profile Targeted Option]</td><td class="rate">$15.00</td><td class="min-max">50/500</td><td class="avg-time">3-7 Days</td><td><button class="details-btn" data-service-id="1201">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                        <tr data-platform="TikTok"><td>402</td><td class="service-name">TikTok Views | 100M/Day | Instant | Unlimited | 𝗙𝗮𝘀𝘁 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱⚡️🔥</td><td class="rate">$0.02</td><td class="min-max">1000/10M</td><td class="avg-time">0-1 Hrs</td><td><button class="details-btn" data-service-id="402">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                    
                     </tbody>
                 </table>
             </div>
              <p id="no-results-message">No services found matching your criteria.</p>
         </div>
     </section>
-
     <!-- Footer -->
     <footer id="main-footer">
         <div class="container">
@@ -419,83 +387,70 @@
                  <div class="footer-logo">Quantum SMM</div>
                  <div class="footer-column footer-about">
                     <h4>About Us</h4>
-                    <p>Quantum SMM provides elite social media marketing services, focusing on speed, quality, and reliability for rapid growth.</p>
+                    <p>Quantum SMM provides elite social media marketing services, focusing on speed, quality, and reliability. We empower individuals and businesses to achieve rapid growth across various social platforms efficiently.</p>
                  </div>
                  <div class="footer-column footer-links-section">
                      <h4>Quick Links</h4>
                      <ul class="footer-links">
-                         <li><a href="index.html">Home</a></li>
-                         <li><a href="services.html">Services</a></li>
-                         <li><a href="about.html">About Us</a></li>
-                         <li><a href="contact.html">Contact Us</a></li>
-                         <li><a href="index.html#faq">FAQ</a></li>
-                         <li><a href="#">Terms of Service</a></li>
-                         <li><a href="#">Privacy Policy</a></li>
+                         <li><a href="/">Home</a></li>
+                         <li><a href="/services">Services</a></li>
+                         <li><a href="#features">Features</a></li>
+                         <li><a href="#who-benefits">Who Benefits</a></li>
+                         <li><a href="#payment-methods">Payments</a></li>
+                            <li><a href="/offers">Offers</a></li>
+                       <li><a href="/about">About Us</a></li>
+                       <li><a href="/contact">Contact Us</a></li>
+                         <li><a href="/menu">Menu</a></li>
                      </ul>
                  </div>
-                 <div class="footer-column footer-links-section"> <!-- Service Categories Column -->
-                      <h4>Service Categories</h4>
-                      <ul class="footer-links">
-                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('Instagram'); return false;">Instagram</a></li>
-                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('Facebook'); return false;">Facebook</a></li>
-                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('YouTube'); return false;">YouTube</a></li>
-                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('TikTok'); return false;">TikTok</a></li>
-                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('Telegram'); return false;">Telegram</a></li>
-                          <li><a href="services.html#platform-filter" onclick="filterPlatformFromLink('all'); return false;">View All</a></li>
-                      </ul>
-                  </div>
+ <div class="footer-column footer-links-section">
+                     <h4>More</h4>
+                     <ul class="footer-links">
+                        <li><a href="#faq">FAQ</a></li>
+                         <li><a href="/terms">Terms of Service</a></li>
+                         <li><a href="/privecy">Privacy Policy</a></li>
+                   
+                         <li><a href="#features">Your TopUp Center</a></li>
+                         <li><a href="https://utech-llc.github.io/webux">WebUX Solution</a></li>
+                         <li><a href="https://utech-llc.github.io/greenshell">GreenShell</a></li>
+                         <li><a href="https://utech-llc.github.io/tools">Tools</a></li>
+                         <li><a href="https://utech-llc.github.io">U Tech LLC</a></li>
+                     </ul>
+                 </div>
                  <div class="footer-column footer-contact">
                     <h4>Connect & Support</h4>
                      <ul class="social-links">
-                         <li><a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
-                         <li><a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a></li>
-                         <li><a href="tel:YOUR_PHONE_NUMBER" aria-label="Call"><i class="fas fa-phone"></i></a></li>
-                         <li><a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    
+                         <li><a href="https://wa.me/+8801781146747" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+                         <li><a href="https://t.me/quantumsmm_bot" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a></li>
+                         <li><a href="tel:01781146747" aria-label="Call"><i class="fas fa-phone"></i></a></li>
+                         <li><a href="https://www.facebook.com/vivesquadhq" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                      </ul>
-                     <p><a href="mailto:support@quantumsmm.com">support@quantumsmm.com</a></p>
+                     <p><a href="mailto:utechfficial24@gmail.com">utechfficial24@gmail.com</a></p>
                  </div>
-                 <p class="copyright">System Build: v3.19 | © <span id="year"></span> Quantum SMM Network. All Rights Reserved. | Design Inspiration by Quantum Core Labs</p>
+                 <p class="copyright">System Build: v1.3 | © <span id="year"></span> Quantum SMM . All Rights Reserved. | Design Inspiration by Quantum Core Labs | a brand of <a href="https://utech-llc.github.io>">U Tech LLC</a> | Developed by <a href="https://utech-llc.github.io/webux">WebUX Solution</a></p>
             </div>
         </div>
     </footer>
-
     <!-- Support Widget -->
     <div id="support-widget">
-        <button id="support-toggle" aria-label="Open Support Options"> <i class="fas fa-headset"></i> </button>
+        <button id="support-toggle" aria-label="Open Support Options">
+            <i class="fas fa-headset"></i>
+        </button>
         <div id="support-options">
-            <a href="tel:YOUR_PHONE_NUMBER" class="call" aria-label="Call Us" title="Call Us"><i class="fas fa-phone"></i></a>
-            <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="whatsapp" aria-label="Chat on WhatsApp" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" class="telegram" aria-label="Chat on Telegram" title="Chat on Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="tel:01781146747" class="call" aria-label="Call Us" title="Call Us"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/+8801781146747" target="_blank" class="whatsapp" aria-label="Chat on WhatsApp" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/quantumsmm_bot" target="_blank" class="telegram" aria-label="Chat on Telegram" title="Chat on Telegram"><i class="fab fa-telegram-plane"></i></a>
         </div>
     </div>
-
     <!-- Ad Banner -->
     <div id="ad-banner">
-         <p><strong>Flash Sale!</strong> Limited time offer on YouTube Views! <a href="services.html#services-table-section" onclick="filterPlatformFromLink('YouTube'); return false;">Check Now!</a></p> <!-- Updated Link -->
-        <button id="close-ad-btn" aria-label="Close Ad"> <i class="fas fa-times"></i> </button>
+         <p><strong>Special Offer!</strong> Get 10% bonus credits on your first fund addition. <a href="#payment-methods">Add Funds Now!</a></p>
+        <button id="close-ad-btn" aria-label="Close Ad">
+            <i class="fas fa-times"></i>
+        </button>
     </div>
-
-    <!-- Details Modal -->
-    <div class="modal" id="service-details-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal-title">Service Details</h5>
-                    <button type="button" class="modal-close-btn" aria-label="Close">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="modal-body" id="modal-body-content">
-                    <!-- Content Loaded via JS -->
-                    <p>Loading service details...</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary modal-close-btn">Close</button>
-                    <a href="#" id="modal-order-btn" class="btn btn-primary">Order Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
@@ -665,15 +620,15 @@
          '105': { title: 'IG Story Views [Fast]', rate: '$0.05', minmax: '100 / 100k', avgTime: '0-1 Hrs', description: 'Boost your Instagram story views quickly. Enter username only. Views are added fast.' },
          '108': { title: 'IG Reel Likes + Views [HQ]', rate: '$0.15', minmax: '100 / 20k', avgTime: '0-2 Hrs', description: 'Get likes for your Reels, includes bonus views. Great for engagement boost. Reel link required.' },
          '112': { title: 'IG Comments [Custom HQ]', rate: '$5.00', minmax: '10 / 500', avgTime: '1-12 Hrs', description: 'Provide your own custom comments (line by line). High-quality profiles will post them. Post link required.' },
-         '201': { title: 'FB Page Likes [Profile Based]', rate: '$2.50', minmax: '100 / 5k', avgTime: '1-12 Hrs', description: 'Likes/Followers from profiles for your Facebook Page. Increases page authority and reach. Page link only.' },
+         '201': { title: 'Facebook Page Followers | 20K/Day | Instant | No Refill ⚡️', rate: '$0.99', minmax: '10 / 10k', avgTime: '0-3 Hrs', description: 'Likes/Followers from profiles for your Facebook Page. Increases page authority and reach. Page link only.' },
          '203': { title: 'FB Post Likes [Emoji Mix]', rate: '$0.50', minmax: '50 / 20k', avgTime: '0-3 Hrs', description: 'Mixed emoji reactions (Like, Love, Haha, etc.) for your Facebook posts. Boosts engagement signals. Post link only.' },
          '207': { title: 'FB Video Views [Watch Time]', rate: '$0.60', minmax: '1k / 1M', avgTime: '6-24 Hrs', description: 'Views that contribute towards watch time metrics. Good for monetization requirements (check eligibility). Video link required.' },
-         '301': { title: 'YT Views [High Retention]', rate: '$1.20', minmax: '500 / 1M', avgTime: '6-24 Hrs', description: 'High-retention views to improve video ranking and watch time. Delivery starts within hours. Video link only. Stable source.' },
+         '301': { title: 'YouTube Views | 20K/Day | Instant | No Refill⚡', rate: '$0.50', minmax: '500 / 10K', avgTime: '0-6 Hrs', description: 'High-retention views to improve video ranking and watch time. Delivery starts within hours. Video link only. Stable source.' },
          '302': { title: 'YT Subscribers [Real Looking]', rate: '$15.00', minmax: '50 / 1k', avgTime: '24-72 Hrs', description: 'Subscribers from real-looking profiles added gradually for safety. Helps grow your channel base. Channel link only. May experience some drops.' },
          '305': { title: 'YT Likes [Real - Stable]', rate: '$4.00', minmax: '50 / 5k', avgTime: '6-24 Hrs', description: 'Likes from real-looking accounts to boost video engagement. Stable delivery. Video link required.' },
          '308': { title: 'YT Watch Time Hours [4000 Hrs]', rate: '$30.00 (per 1k hours)', minmax: '1000 / 4000', avgTime: '3-7 Days', description: 'Package to help reach YouTube monetization requirements. Requires video longer than 1 hour. Delivered gradually.' },
          '401': { title: 'TikTok Followers [HQ - Fast]', rate: '$2.00', minmax: '100 / 20k', avgTime: '0-6 Hrs', description: 'High-quality followers delivered quickly to enhance your TikTok profile authority. Profile link only.' },
-         '402': { title: 'TikTok Video Views [Super Fast]', rate: '$0.02', minmax: '1k / 10M', avgTime: '0-1 Hrs', description: 'Boost your TikTok video views rapidly. Excellent for increasing visibility and hitting FYP potential. Video link only.' },
+         '402': { title: 'TikTok Views | 100M/Day | Instant | Unlimited | 𝗙𝗮𝘀𝘁 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱⚡️🔥', rate: '$0.02', minmax: '1k / 10M', avgTime: '0-1 Hrs', description: 'Boost your TikTok video views rapidly. Excellent for increasing visibility and hitting FYP potential. Video link only.' },
          '404': { title: 'TikTok Likes [HQ - Instant]', rate: '$0.90', minmax: '100 / 100k', avgTime: '0-2 Hrs', description: 'High-quality likes for your TikTok videos, delivered instantly. Video link required.' },
          '501': { title: 'Telegram Members [Non Drop - Real Look]', rate: '$1.50', minmax: '100 / 50k', avgTime: '0-12 Hrs', description: 'Add members that look real to your public Telegram channel or group. Good stability reported. Invite link required.' },
          '502': { title: 'Telegram Post Views [Last 10 Posts]', rate: '$0.04', minmax: '100 / 1M', avgTime: '0-1 Hrs', description: 'Instantly increase views on your latest Telegram posts (up to last 10). Great for channel activity boost. Public channel link required.' },
