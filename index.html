@@ -289,8 +289,8 @@
             <nav id="navbar">
                 <a href="/" class="logo"><i class="fas fa-atom"></i>Quantum SMM</a>
                 <ul id="nav-links-desktop">
-                    <li><a href="/" class="active">Home</a></li>
-                    <li><a href="/services">Services</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services" class="active">Services</a></li>
                     <li><a href="/offers">Offers</a></li>
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/contact">Contact Us</a></li>
@@ -303,8 +303,8 @@
             </nav>
         </div>
         <ul id="mobile-nav-links">
-                 <li><a href="/" class="active">Home</a></li>
-                    <li><a href="/services">Services</a></li>
+                 <li><a href="/">Home</a></li>
+                    <li><a href="/services" class="active">Services</a></li>
                     <li><a href="/offers">Offers</a></li>
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/contact">Contact Us</a></li>
@@ -364,16 +364,17 @@
                     </thead>
                     <tbody>
                         <!-- Instagram -->
-                
                         <!-- Facebook -->
                         <tr data-platform="Facebook"><td>201</td><td class="service-name">Facebook Page Followers | 20K/Day | Instant | No Refill ⚡️</td><td class="rate">$0.99</td><td class="min-max">10/10k</td><td class="avg-time">0-3 Hrs</td><td><button class="details-btn" data-service-id="201">Details <i class="fas fa-info-circle"></i></button></td></tr>
+                       
                 
                         <!-- YouTube -->
                         <tr data-platform="YouTube"><td>301</td><td class="service-name">YouTube Views | 20K/Day | Instant | No Refill⚡</td><td class="rate">$0.50</td><td class="min-max">500/10K</td><td class="avg-time">0-6 Hrs</td><td><button class="details-btn" data-service-id="301">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                   
+                  
                         <!-- TikTok -->
+                       
                         <tr data-platform="TikTok"><td>402</td><td class="service-name">TikTok Views | 100M/Day | Instant | Unlimited | 𝗙𝗮𝘀𝘁 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱⚡️🔥</td><td class="rate">$0.02</td><td class="min-max">1000/10M</td><td class="avg-time">0-1 Hrs</td><td><button class="details-btn" data-service-id="402">Details <i class="fas fa-info-circle"></i></button></td></tr>
-                    
+                     
                     </tbody>
                 </table>
             </div>
@@ -428,7 +429,7 @@
                      </ul>
                      <p><a href="mailto:utechfficial24@gmail.com">utechfficial24@gmail.com</a></p>
                  </div>
-                 <p class="copyright">System Build: v1.3 | © <span id="year"></span> Quantum SMM . All Rights Reserved. | Design Inspiration by Quantum Core Labs | a brand of <a href="https://utech-llc.github.io>">U Tech LLC</a> | Developed by <a href="https://utech-llc.github.io/webux">WebUX Solution</a></p>
+                 <p class="copyright">System Build: v1.4 | © <span id="year"></span> Quantum SMM . All Rights Reserved. | Design Inspiration by Quantum Core Labs | a brand of <a href="https://utech-llc.github.io>">U Tech LLC</a> | Developed by <a href="https://utech-llc.github.io/webux">WebUX Solution</a></p>
             </div>
         </div>
     </footer>
@@ -449,6 +450,25 @@
         <button id="close-ad-btn" aria-label="Close Ad">
             <i class="fas fa-times"></i>
         </button>
+    </div>
+
+    <!-- Service Details Modal (ADDED) -->
+    <div class="modal" id="service-details-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Service Details</h5>
+                    <button type="button" class="modal-close-btn" aria-label="Close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body" id="modal-body-content">
+                    <!-- Content will be injected by JavaScript -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modal-close-btn">Close</button>
+                    <a href="#" id="modal-order-btn" class="btn btn-primary">Order This Service</a>
+                </div>
+            </div>
+        </div>
     </div>
     
 
@@ -473,7 +493,8 @@
         });
         mobileNav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', (e) => {
-                if (link.getAttribute('href')?.startsWith('#') || link.classList.contains('btn') || link.getAttribute('href')?.endsWith('.html')) {
+                // Updated condition to check for relative paths too
+                if (link.getAttribute('href')?.startsWith('#') || link.classList.contains('btn') || link.getAttribute('href')?.includes('.html') || !link.getAttribute('href')?.startsWith('http')) {
                     if (mobileNav.classList.contains('active')) { menuToggle.click(); }
                 }
             });
@@ -483,12 +504,12 @@
     // --- Sticky Header Logic & Filter Bar Adjustment ---
     const header = document.getElementById('main-header');
     let headerInitialHeight = 0;
-    const filterSection = document.getElementById('platform-filter'); // Get filter section
+    const filterSection = document.getElementById('platform-filter'); 
 
     if(header) {
         headerInitialHeight = header.offsetHeight;
         if(filterSection) {
-            filterSection.style.top = `${headerInitialHeight}px`; // Initial sticky top position
+            filterSection.style.top = `${headerInitialHeight}px`; 
         }
     }
 
@@ -498,28 +519,38 @@
         const isScrolled = scrollTop > 50;
         header.classList.toggle('scrolled', isScrolled);
 
-        // Adjust sticky top for filter section when header shrinks/grows
         if(filterSection && header) {
             const currentHeaderHeight = header.offsetHeight;
-            // Only update if the filter section has 'sticky' position
             if (window.getComputedStyle(filterSection).position === 'sticky') {
                  filterSection.style.top = `${currentHeaderHeight}px`;
             }
         }
-        // No active link highlighting based on scroll needed for services page
     }
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     // --- Active Nav Link Highlighting (Simple for Services Page) ---
     function setActiveLinkServicePage() {
-        const serviceLinksDesktop = document.querySelectorAll('#nav-links-desktop a[href="services.html"]');
-        const serviceLinksMobile = document.querySelectorAll('#mobile-nav-links a[href="services.html"]');
+        const serviceLinksDesktop = document.querySelectorAll('#nav-links-desktop a[href="/services"]'); // Changed to /services
+        const serviceLinksMobile = document.querySelectorAll('#mobile-nav-links a[href="/services"]'); // Changed to /services
         const allNavLinks = document.querySelectorAll('#nav-links-desktop a, #mobile-nav-links a');
+        
         allNavLinks.forEach(link => link.classList.remove('active'));
-        serviceLinksDesktop.forEach(link => link?.classList.add('active'));
-        serviceLinksMobile.forEach(link => link?.classList.add('active'));
+        
+        const currentPath = window.location.pathname;
+        if (currentPath === '/' || currentPath === '/index.html' || currentPath === '/index' || currentPath === '') {
+             document.querySelectorAll('#nav-links-desktop a[href="/"], #mobile-nav-links a[href="/"]').forEach(l => l.classList.add('active'));
+        } else if (currentPath.includes('/services')) {
+            serviceLinksDesktop.forEach(link => link?.classList.add('active'));
+            serviceLinksMobile.forEach(link => link?.classList.add('active'));
+        } else { // Fallback for other pages if needed
+            allNavLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        }
     }
-    setActiveLinkServicePage(); // Call on load
+    setActiveLinkServicePage(); 
 
     // --- Intersection Observer for Animations ---
     const animatedElements = document.querySelectorAll('.animated-element');
@@ -529,10 +560,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    // observer.unobserve(entry.target); // Uncomment for one-time animation
-                } else {
-                    // entry.target.classList.remove('visible'); // Uncomment to re-animate
-                }
+                } 
             });
         }, observerOptions);
         animatedElements.forEach(elem => { observer.observe(elem); });
@@ -586,7 +614,7 @@
        try { if (localStorage.getItem(AD_CLOSED_KEY) === 'true') { adBanner.style.display = 'none'; adBanner.classList.add('hidden-permanently'); } }
        catch(e) { console.warn("localStorage error on initial check"); }
        if (!adBanner.classList.contains('hidden-permanently')) {
-           adShowTimeout = setTimeout(showAdBanner, 1500); // Show after 1.5 seconds
+           adShowTimeout = setTimeout(showAdBanner, 1500); 
        }
        if (closeAdBtn) {
            closeAdBtn.addEventListener('click', () => {
@@ -596,7 +624,7 @@
                 adBanner.classList.add('hidden-permanently');
                 try { localStorage.setItem(AD_CLOSED_KEY, 'true'); }
                 catch (e) { console.warn('localStorage access error.'); }
-                setTimeout(() => { if(adBanner) adBanner.style.display = 'none'; }, 500); // Hide after animation
+                setTimeout(() => { if(adBanner) adBanner.style.display = 'none'; }, 500); 
            });
        }
     }
@@ -607,11 +635,14 @@
     const serviceTableBody = document.querySelector('#smm-services-table tbody');
     const serviceRows = serviceTableBody ? Array.from(serviceTableBody.querySelectorAll('tr')) : [];
     const noResultsMsg = document.getElementById('no-results-message');
+    
+    // Modal elements
     const modal = document.getElementById('service-details-modal');
     const modalTitle = document.getElementById('modal-title');
-    const modalBody = document.getElementById('modal-body-content');
+    const modalBodyContent = document.getElementById('modal-body-content'); // Corrected ID usage
     const modalOrderBtn = document.getElementById('modal-order-btn');
     const modalCloseBtns = document.querySelectorAll('.modal-close-btn');
+
 
     // --- Service Details Data (Keep updated with all services) ---
     const serviceDetailsData = {
@@ -689,11 +720,11 @@
         let debounceTimer;
         searchInput.addEventListener('keyup', () => {
             clearTimeout(debounceTimer);
-            debounceTimer = setTimeout(filterServices, 300); // Debounce
+            debounceTimer = setTimeout(filterServices, 300); 
         });
     }
 
-    // Basic cookie function (use js-cookie library for better management)
+    // Basic cookie function
     function setCookie(name, value, days) {
         let expires = "";
         if (days) {
@@ -701,7 +732,6 @@
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
         }
-        // Ensure value is stringified JSON
         const stringValue = typeof value === 'string' ? value : JSON.stringify(value);
         document.cookie = name + "=" + (stringValue || "") + expires + "; path=/; SameSite=Lax";
     }
@@ -710,23 +740,23 @@
     // Function to set cookie and redirect
     function setOrderCookieAndRedirect(id, name, rate, minMax) {
         const rateValue = parseFloat(String(rate).replace('$', '')) || 0;
-        const minMaxValue = minMax || 'N/A'; // Get min/max from details
+        const minMaxValue = minMax || 'N/A'; 
 
         const orderData = {
             serviceId: id,
             serviceName: name,
             ratePer1000: rateValue,
-            minMax: minMaxValue // Include min/max in cookie
+            minMax: minMaxValue 
         };
-        setCookie('pendingOrder', orderData, 1); // Store data as JSON string
-        window.location.href = 'checkout.html'; // Redirect to checkout
+        setCookie('pendingOrder', orderData, 1); 
+        window.location.href = '/checkout'; // Ensure this path is correct for your setup. e.g. /checkout.html or /checkout
     }
 
 
     // Modal Logic
     function openModal(serviceId) {
          const details = serviceDetailsData[serviceId];
-         if (modal && details && modalTitle && modalBody && modalOrderBtn) {
+         if (modal && details && modalTitle && modalBodyContent && modalOrderBtn) { // Use modalBodyContent
              modalTitle.textContent = details.title || `Service #${serviceId}`;
              let bodyHTML = `
                  <ul>
@@ -738,25 +768,24 @@
                  <h5>Description</h5>
                  <p class="description">${details.description || 'No detailed description available.'}</p>
              `;
-             modalBody.innerHTML = bodyHTML;
+             modalBodyContent.innerHTML = bodyHTML; // Use modalBodyContent
 
-             // Update order button behavior
              modalOrderBtn.textContent = "Order This Service";
-             modalOrderBtn.href = "#"; // Use JS for action
+             modalOrderBtn.href = "#"; 
              modalOrderBtn.onclick = (e) => {
-                 e.preventDefault(); // Prevent default link action
+                 e.preventDefault(); 
                  setOrderCookieAndRedirect(serviceId, details.title, details.rate, details.minmax);
                  closeModal();
              };
 
              modal.classList.add('show');
              body.classList.add('modal-open');
-         } else if (modal) {
+         } else if (modal && modalTitle && modalBodyContent && modalOrderBtn) { // Check all elements exist
               modalTitle.textContent = `Service #${serviceId}`;
-              modalBody.innerHTML = `<p>Details for this service are currently unavailable. Please contact support.</p>`;
+              modalBodyContent.innerHTML = `<p>Details for this service are currently unavailable. Please contact support.</p>`; // Use modalBodyContent
               modalOrderBtn.textContent = "Contact Support";
-              modalOrderBtn.href = 'contact.html';
-              modalOrderBtn.onclick = null; // Clear previous handler
+              modalOrderBtn.href = '/contact'; // Changed to /contact
+              modalOrderBtn.onclick = null; 
               modal.classList.add('show');
               body.classList.add('modal-open');
          }
@@ -777,39 +806,40 @@
          });
     }
     modalCloseBtns.forEach(btn => btn.addEventListener('click', closeModal));
-    if (modal) { modal.addEventListener('click', (event) => { if (event.target === modal) { closeModal(); } }); }
+    if (modal) { 
+        modal.addEventListener('click', (event) => { 
+            if (event.target === modal) { // Only close if the backdrop (modal itself) is clicked
+                closeModal(); 
+            }
+        }); 
+    }
 
-    // Footer Link Filtering Function (make sure it's globally accessible)
+
     window.filterPlatformFromLink = function(platformName) {
         const targetButton = document.querySelector(`.platform-btn[data-platform="${platformName}"]`);
         if (targetButton) {
             platformBtns.forEach(b => b.classList.remove('active'));
             targetButton.classList.add('active');
             filterServices();
-            const filterSection = document.getElementById('platform-filter');
-            if (filterSection) {
-                // Check if the filter section is sticky before scrolling
-                const isSticky = window.getComputedStyle(filterSection).position === 'sticky';
-                const offset = isSticky && header ? header.offsetHeight : 0; // Account for sticky header height
-                const elementPosition = filterSection.getBoundingClientRect().top + window.pageYOffset;
+            const filterSectionEl = document.getElementById('platform-filter'); // Renamed variable
+            if (filterSectionEl) {
+                const isSticky = window.getComputedStyle(filterSectionEl).position === 'sticky';
+                const offset = isSticky && header ? header.offsetHeight : 0; 
+                const elementPosition = filterSectionEl.getBoundingClientRect().top + window.pageYOffset;
                 window.scrollTo({
-                    top: elementPosition - offset - 10, // Scroll slightly above the filter
+                    top: elementPosition - offset - 10, 
                     behavior: 'smooth'
                 });
             }
         }
-        // return false; // Not needed if called directly from JS onclick
     }
 
-     // Check URL hash on load for filtering from footer link
      if(window.location.hash === '#platform-filter') {
-         // You might need a more robust way to get the platform name if it's not passed
-         // For now, this just scrolls to the filter section
-         const filterSection = document.getElementById('platform-filter');
-          if (filterSection) {
-            setTimeout(() => { // Delay scroll slightly to allow layout shifts
+         const filterSectionEl = document.getElementById('platform-filter'); // Renamed variable
+          if (filterSectionEl) {
+            setTimeout(() => { 
                  const offset = header ? header.offsetHeight : 0;
-                 const elementPosition = filterSection.getBoundingClientRect().top + window.pageYOffset;
+                 const elementPosition = filterSectionEl.getBoundingClientRect().top + window.pageYOffset;
                  window.scrollTo({
                     top: elementPosition - offset - 10,
                     behavior: 'smooth'
@@ -817,10 +847,12 @@
             }, 100);
           }
      }
+    // Initialize filters on page load
+    filterServices();
 
 }); // End DOMContentLoaded
 </script>
 
 
 </body>
-</html>
+    </html>
